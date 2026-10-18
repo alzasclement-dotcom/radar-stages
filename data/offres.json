@@ -1,0 +1,236 @@
+{
+  "derniere_mise_a_jour": "2026-10-19",
+  "journal": [
+    {
+      "date": "2026-10-19",
+      "ajoutees": 9,
+      "expirees": 0,
+      "sources_inaccessibles": [
+        "group.bnpparibas (403)",
+        "jobteaser.com (403)",
+        "ziprecruiter.fr (403)",
+        "careers.amundi.com (introuvable)"
+      ]
+    }
+  ],
+  "offres": [
+    {
+      "id": "0d98049354c4",
+      "titre": "Stage Analyste Multi Gestion - Janvier 2027",
+      "entreprise": "Rothschild & Co Asset Management",
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "allocation",
+      "date_debut": "2027-01",
+      "duree": 6,
+      "niveau": "m1_accepte",
+      "competences": [
+        "excel_vba_python",
+        "marches"
+      ],
+      "score": 97,
+      "pourquoi": "Le stagiaire seconde les analystes de la recherche de fonds (due diligence en anglais, liquidité, recherches ad hoc) ; Excel et VBA sont cités en atout, ce qui recoupe directement ton profil de modélisation.",
+      "vigilance": "Anglais écrit exigé et lettre de motivation obligatoire ; Bloomberg et Morningstar Direct sont un plus que tu n'as pas mentionnés.",
+      "angle": "Insiste sur tes reportings automatisés (Excel/VBA/Python) et sur ta volonté de travailler sur la sélection de fonds tiers.",
+      "url": "https://www.rothschildandco.com/fr-fr/carrieres/profils-experimentes/nos-carrieres/stage-analyste-multi-gestion---janvier-2027/",
+      "type_source": "officielle",
+      "date_publication": null,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-10-19",
+      "statut": "active"
+    },
+    {
+      "id": "ff2a82dfe292",
+      "titre": "Stage - Sélection Private Assets - Janvier 2027",
+      "entreprise": "Rothschild & Co Asset Management",
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "allocation",
+      "date_debut": "2027-01",
+      "duree": 6,
+      "niveau": "m1_accepte",
+      "competences": [
+        "marches"
+      ],
+      "score": 94,
+      "pourquoi": "Équipe qui analyse et suit des fonds de private equity, d'infrastructure et de dette privée pour la clientèle de la banque privée : c'est de la sélection de fonds tiers, au coeur de ton projet, avec ton passage en banque privée Swiss Life comme point d'appui côté clients.",
+      "vigilance": "Bac+4 ou Bac+5 accepté, donc ton M1 est recevable ; la date de publication n'est pas indiquée et aucun outil de modélisation n'est demandé (seulement Office et anglais).",
+      "angle": "Mets en avant ta culture marchés, ta rigueur de modélisation sous Excel et ton envie de faire de la sélection de fonds en architecture ouverte.",
+      "url": "https://www.rothschildandco.com/fr-fr/carrieres/profils-experimentes/nos-carrieres/stage---selection-private-assets---janvier-2027/",
+      "type_source": "officielle",
+      "date_publication": null,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-10-19",
+      "statut": "active"
+    },
+    {
+      "id": "ce78427a333d",
+      "titre": "Stage Analyst Financier Buy Side - Janvier 2027",
+      "entreprise": "Rothschild & Co Asset Management",
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "asset_management",
+      "date_debut": "2027-01",
+      "duree": 6,
+      "niveau": "m1_accepte",
+      "competences": [
+        "excel_vba_python",
+        "marches"
+      ],
+      "score": 85,
+      "pourquoi": "Analyse fondamentale et ESG d'actions européennes (univers STOXX 600) au sein de l'équipe actions ; Excel, VBA et culture des marchés sont requis, ce qui colle à tes compétences de modélisation.",
+      "vigilance": "Poste centré sur l'analyse actions, plus éloigné de la sélection de fonds ; une première expérience d'analyse est souhaitée.",
+      "angle": "Valorise tes modèles financiers en Excel/VBA et ta pratique des marchés actions, en gardant le lien avec l'allocation.",
+      "url": "https://www.rothschildandco.com/fr-fr/carrieres/profils-experimentes/nos-carrieres/stage-analyst-financier-buy-side----janvier-2027/",
+      "type_source": "officielle",
+      "date_publication": null,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-10-19",
+      "statut": "active"
+    },
+    {
+      "id": "2e188094ac9e",
+      "titre": "Stage Assistant(e) Banquier Privé - Nice - Janvier 2027 H/F",
+      "entreprise": "Rothschild & Co Martin Maurel",
+      "ville": "Nice",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "metier": "banque_privee",
+      "date_debut": "2027-01",
+      "duree": 6,
+      "niveau": "m1_accepte",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 77,
+      "pourquoi": "Préparation de rendez-vous prospects (organigrammes, états financiers) et suivi des opérations courantes avec le banquier privé : un poste proche de ton passage en banque privée Swiss Life.",
+      "vigilance": "Basé à Nice, donc déménagement hors de tes zones préférées ; Bac+4/5 en banque, finance ou gestion de patrimoine demandé.",
+      "angle": "Mets en avant ton expérience de banque privée et ton aisance à analyser un dossier client patrimonial.",
+      "url": "https://www.rothschildandco.com/fr-fr/carrieres/profils-experimentes/nos-carrieres/stage-assistante-banquier-prive---nice---janvier-2027-hf/",
+      "type_source": "officielle",
+      "date_publication": null,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-10-19",
+      "statut": "active"
+    },
+    {
+      "id": "621792dc479e",
+      "titre": "Stage Business Development - Janvier 2027",
+      "entreprise": "Rothschild & Co Martin Maurel",
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "banque_privee",
+      "date_debut": null,
+      "duree": 6,
+      "niveau": "m1_accepte",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 76,
+      "pourquoi": "Appui aux banquiers privés pour les propositions commerciales et la coordination des spécialistes : ton expérience de la relation client patrimoniale en banque privée Swiss Life et en agences sert directement.",
+      "vigilance": "Date incohérente sur la page (titre : janvier 2027, texte : juillet 2026) : à confirmer avant de candidater.",
+      "angle": "Parle de tes objectifs commerciaux atteints et de ta capacité à préparer des propositions pour des clients patrimoniaux.",
+      "url": "https://www.rothschildandco.com/fr-fr/carrieres/profils-experimentes/nos-carrieres/stage-business-development---janvier-2027/",
+      "type_source": "officielle",
+      "date_publication": null,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-10-19",
+      "statut": "active"
+    },
+    {
+      "id": "cc6ebedf394c",
+      "titre": "Stage Ingénierie Patrimoniale – Janvier 2027",
+      "entreprise": "Rothschild & Co Martin Maurel",
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "banque_privee",
+      "date_debut": "2027-01",
+      "duree": 6,
+      "niveau": "m2_exige",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 71,
+      "pourquoi": "Recherche juridique et fiscale, simulations et présentations patrimoniales au sein du département d'ingénierie patrimoniale : cela prolonge ton Master 1 Gestion de patrimoine au Cnam.",
+      "vigilance": "Niveau M2 demandé (droit-fiscalité, ingénierie patrimoniale ou élève-avocat) ; recherche juridique plus qu'allocation.",
+      "angle": "Relie ton M1 Gestion de patrimoine et tes simulations Excel à la demande de structuration patrimoniale.",
+      "url": "https://www.rothschildandco.com/fr-fr/carrieres/profils-experimentes/nos-carrieres/stage-ingenierie-patrimoniale--janvier-2027/",
+      "type_source": "officielle",
+      "date_publication": null,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-10-19",
+      "statut": "active"
+    },
+    {
+      "id": "b99c75891671",
+      "titre": "Stage Private Equity Banque Privée - Janvier 2027",
+      "entreprise": "Rothschild & Co Martin Maurel",
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "banque_privee",
+      "date_debut": "2027-01",
+      "duree": 6,
+      "niveau": "m2_exige",
+      "competences": [
+        "marches"
+      ],
+      "score": 71,
+      "pourquoi": "Middle-office et finance de l'activité Private Assets de la banque privée (suivi de campagnes de commercialisation, flux, reportings) : proche de ton goût pour les reportings automatisés et les fonds.",
+      "vigilance": "Niveau M2 demandé (Bac+5) ; un M1 motivé peut tenter sa chance mais risque d'être écarté.",
+      "angle": "Insiste sur l'automatisation de reportings et ton intérêt pour les fonds non cotés comme brique d'allocation.",
+      "url": "https://www.rothschildandco.com/fr-fr/carrieres/profils-experimentes/nos-carrieres/stage-private-equity-banque-privee---janvier-2027/",
+      "type_source": "officielle",
+      "date_publication": null,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-10-19",
+      "statut": "active"
+    },
+    {
+      "id": "ffb1d7cf6dd4",
+      "titre": "Stage Ingénierie Patrimoniale (H/F) - Lyon",
+      "entreprise": "Rothschild & Co",
+      "ville": "Lyon",
+      "region": "Auvergne-Rhône-Alpes",
+      "metier": "banque_privee",
+      "date_debut": "2027-01",
+      "duree": 6,
+      "niveau": "m2_exige",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 62,
+      "pourquoi": "Audits patrimoniaux et recherches juridiques et fiscales auprès d'ingénieurs patrimoniaux seniors, sur une base civile et fiscale que tu travailles dans ton M1.",
+      "vigilance": "M2 demandé, avec préférence pour un élève-avocat ; poste à Lyon, hors de tes zones préférées.",
+      "angle": "Mets en avant ta formation en gestion de patrimoine et ta rigueur de synthèse.",
+      "url": "https://www.rothschildandco.com/fr-fr/carrieres/profils-experimentes/nos-carrieres/stage-ingenierie-patrimoniale-hf2/",
+      "type_source": "officielle",
+      "date_publication": null,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-10-19",
+      "statut": "active"
+    },
+    {
+      "id": "317db82699ed",
+      "titre": "Stage Ingénieur Patrimonial (H/F) - Bordeaux",
+      "entreprise": "Rothschild & Co",
+      "ville": "Bordeaux",
+      "region": "Nouvelle-Aquitaine",
+      "metier": "banque_privee",
+      "date_debut": "2027-01",
+      "duree": 6,
+      "niveau": "m2_exige",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 62,
+      "pourquoi": "Recherches juridiques et fiscales, déclarations et simulations de schémas patrimoniaux : un terrain d'application de ta formation en gestion de patrimoine.",
+      "vigilance": "Cursus M2 en droit-fiscalité ou ingénierie patrimoniale demandé ; poste à Bordeaux et fin de stage indiquée en juin, donc durée à confirmer.",
+      "angle": "Appuie-toi sur ta formation au Cnam et tes modélisations Excel pour montrer que tu peux simuler des schémas patrimoniaux.",
+      "url": "https://www.rothschildandco.com/fr-fr/carrieres/profils-experimentes/nos-carrieres/stage-ingenieur-patrimonial-hf2/",
+      "type_source": "officielle",
+      "date_publication": null,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-10-19",
+      "statut": "active"
+    }
+  ]
+}

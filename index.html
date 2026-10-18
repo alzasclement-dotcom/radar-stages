@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Radar Stages</title>
+<meta name="description" content="Stages en allocation d'actifs, banque privée et asset management, mis à jour chaque matin.">
+<style>
+:root{--bg:#f7f7f5;--surface:#fff;--text:#1c1f24;--muted:#5d6570;--line:#dcdfe3;--accent:#1f4e8c;--accent-ink:#fff;--warn:#8a4b00;--warn-bg:#fdf1e0}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171b;--surface:#1c2025;--text:#e8eaed;--muted:#9aa3ad;--line:#2d333a;--accent:#7fb0ee;--accent-ink:#0d1621;--warn:#f0b66b;--warn-bg:#2b2113}}
+:root[data-theme="dark"]{--bg:#14171b;--surface:#1c2025;--text:#e8eaed;--muted:#9aa3ad;--line:#2d333a;--accent:#7fb0ee;--accent-ink:#0d1621;--warn:#f0b66b;--warn-bg:#2b2113}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.wrap{max-width:60rem;margin:0 auto;padding:0 16px 48px}
+header{padding:24px 0 8px;display:flex;gap:12px;justify-content:space-between;align-items:flex-start;flex-wrap:wrap}
+h1{font-size:1.5rem;margin:0}
+h2{font-size:1.05rem;margin:0 0 8px}
+.meta{color:var(--muted);margin:4px 0 0;font-size:.9rem}
+a{color:var(--accent)}
+.btn.primary{color:var(--accent-ink)}
+button,select,input{font:inherit;color:inherit}
+button,.btn{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer;text-decoration:none;display:inline-block}
+button:hover,.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:12px 16px;margin:16px 0}
+.news ul{margin:0;padding-left:20px}
+.filters{display:flex;flex-wrap:wrap;gap:12px 16px;align-items:end}
+.filters label{display:flex;flex-direction:column;font-size:.85rem;color:var(--muted);gap:2px}
+.filters label.check{flex-direction:row;align-items:center;gap:6px;padding-bottom:6px}
+.filters select,.filters input[type=number]{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 8px;min-width:8rem}
+.bar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin:16px 0 8px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;margin:0 0 12px}
+.card.mini{padding:10px 16px}
+.top{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
+.card h3{margin:0;font-size:1.05rem;overflow-wrap:anywhere}
+.sub{color:var(--muted);font-size:.9rem;margin:2px 0 0}
+.pill{flex:none;min-width:3rem;text-align:center;font-weight:700;border-radius:999px;padding:2px 10px;border:2px solid var(--accent);color:var(--accent)}
+.pill.hi{background:var(--accent);color:var(--accent-ink)}
+.pill.lo{border-color:var(--line);color:var(--muted)}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;padding:0;list-style:none}
+.tags li{font-size:.8rem;border:1px solid var(--line);border-radius:4px;padding:1px 8px;color:var(--muted)}
+.tags li.warn{background:var(--warn-bg);color:var(--warn);border-color:var(--warn)}
+.card dl{margin:8px 0;display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;font-size:.92rem}
+.card dt{color:var(--muted)}
+.card dd{margin:0;overflow-wrap:anywhere}
+.actions{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.actions select{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 8px}
+details.arch>summary{cursor:pointer;font-weight:600;padding:8px 0}
+.empty,.err{color:var(--muted);padding:16px 0}
+.err{color:var(--warn)}
+@media (max-width:480px){.card dl{grid-template-columns:1fr}.card dt{margin-top:4px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div>
+    <h1>Radar Stages</h1>
+    <p class="meta" id="meta">Chargement…</p>
+  </div>
+  <button type="button" id="theme" aria-label="Changer de thème">Thème</button>
+</header>
+<main>
+  <section class="panel news" id="news" hidden aria-labelledby="news-h"><h2 id="news-h">Nouveautés du jour</h2><ul id="news-list"></ul></section>
+  <section class="panel" aria-label="Filtres">
+    <div class="filters">
+      <label>Métier<select id="f-metier"><option value="">Tous</option><option value="allocation">Allocation / sélection de fonds</option><option value="banque_privee">Banque privée / patrimoine</option><option value="asset_management">Asset management</option></select></label>
+      <label>Zone<select id="f-zone"><option value="">Toutes</option><option value="paris">Paris / Île-de-France</option><option value="montpellier">Montpellier / Occitanie</option><option value="autre">Reste de la France</option></select></label>
+      <label>Score minimum<input type="number" id="f-score" min="0" max="100" step="5" value="0"></label>
+      <label class="check"><input type="checkbox" id="f-m2"> Masquer M2 exigé</label>
+    </div>
+  </section>
+  <div class="bar"><h2 id="count" aria-live="polite" style="margin:0"></h2><button type="button" id="csv">Exporter en CSV</button></div>
+  <div id="list"></div>
+  <details class="arch panel" id="arch-wrap" hidden><summary id="arch-sum"></summary><div id="arch"></div></details>
+</main>
+</div>
+<script>
+(function(){
+"use strict";
+var METIERS={allocation:"Allocation / sélection de fonds",banque_privee:"Banque privée / patrimoine",asset_management:"Asset management"};
+var NIVEAUX={m1_accepte:"Bac+4 / M1 accepté",non_precise:"Niveau non précisé",m2_exige:"Niveau M2 demandé"};
+var SUIVI={"":"Aucun suivi",a_postuler:"À postuler",postule:"Postulé",entretien:"Entretien",refuse:"Refusé",pas_interesse:"Pas intéressé"};
+var MOIS=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+var data=null, shown=[], suivi={};
+
+function $(id){return document.getElementById(id)}
+function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
+function norm(s){return String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").toLowerCase()}
+function zone(o){var r=norm(o.region);return r==="ile-de-france"?"paris":r==="occitanie"?"montpellier":"autre"}
+function fmtMois(d){if(!d)return null;var m=/^(\d{4})-(\d{2})/.exec(d);return m?MOIS[+m[2]-1]+" "+m[1]:d}
+function fmtDate(d){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d||"");return m?(+m[3])+" "+MOIS[+m[2]-1]+" "+m[1]:"—"}
+
+function load(){try{suivi=JSON.parse(localStorage.getItem("radar-suivi")||"{}")||{}}catch(e){suivi={}}}
+function save(){try{localStorage.setItem("radar-suivi",JSON.stringify(suivi))}catch(e){}}
+
+function setTheme(t){
+  if(t)document.documentElement.setAttribute("data-theme",t);else document.documentElement.removeAttribute("data-theme");
+}
+function initTheme(){
+  try{var t=localStorage.getItem("radar-theme");if(t)setTheme(t)}catch(e){}
+  $("theme").addEventListener("click",function(){
+    var cur=document.documentElement.getAttribute("data-theme")||(matchMedia("(prefers-color-scheme:dark)").matches?"dark":"light");
+    var next=cur==="dark"?"light":"dark";setTheme(next);
+    try{localStorage.setItem("radar-theme",next)}catch(e){}
+  });
+}
+
+function pill(o){var p=el("span","pill"+(o.score>=80?" hi":o.score<60?" lo":""),String(o.score));p.title="Score d'adéquation sur 100";p.setAttribute("aria-label","Score "+o.score+" sur 100");return p}
+
+function card(o,expired){
+  var s=suivi[o.id]||"";
+  var c=el("article","card"+(s==="pas_interesse"?" mini":""));c.id="o-"+o.id;
+  var top=el("div","top"),l=el("div");
+  l.appendChild(el("h3",null,o.titre));
+  l.appendChild(el("p","sub",o.entreprise+" · "+o.ville));
+  top.appendChild(l);top.appendChild(pill(o));c.appendChild(top);
+  if(s==="pas_interesse"&&!expired){
+    var b=el("button",null,"Remettre dans la liste");b.type="button";
+    b.addEventListener("click",function(){delete suivi[o.id];save();render()});
+    c.appendChild(b);return c;
+  }
+  var tags=el("ul","tags");
+  tags.appendChild(el("li",null,METIERS[o.metier]||o.metier));
+  tags.appendChild(el("li",o.niveau==="m2_exige"?"warn":null,NIVEAUX[o.niveau]||o.niveau));
+  if(o.type_source==="agregateur")tags.appendChild(el("li","warn","Source : agrégateur"));
+  if(!o.date_debut)tags.appendChild(el("li","warn","Date à vérifier"));
+  c.appendChild(tags);
+  var dl=el("dl");
+  function row(k,v){dl.appendChild(el("dt",null,k));dl.appendChild(el("dd",null,v))}
+  row("Début",(fmtMois(o.date_debut)||"à vérifier")+(o.duree?" · "+o.duree+" mois":""));
+  row("Pourquoi",o.pourquoi);row("Vigilance",o.vigilance);row("Angle",o.angle);
+  c.appendChild(dl);
+  var a=el("div","actions");
+  var link=el("a","btn primary","Voir l'offre");link.href=o.url;link.target="_blank";link.rel="noopener noreferrer";
+  link.setAttribute("aria-label","Voir l'offre : "+o.titre+" (nouvel onglet)");a.appendChild(link);
+  if(!expired){
+    var lab=el("label",null,"Suivi : ");lab.className="sub";
+    var sel=el("select");
+    Object.keys(SUIVI).forEach(function(k){var op=el("option",null,SUIVI[k]);op.value=k;if(k===s)op.selected=true;sel.appendChild(op)});
+    sel.addEventListener("change",function(){if(sel.value)suivi[o.id]=sel.value;else delete suivi[o.id];save();render()});
+    lab.appendChild(sel);a.appendChild(lab);
+  }
+  c.appendChild(a);return c;
+}
+
+function filtered(){
+  var m=$("f-metier").value,z=$("f-zone").value,min=+$("f-score").value||0,no2=$("f-m2").checked;
+  return data.offres.filter(function(o){
+    return o.statut==="active"&&(!m||o.metier===m)&&(!z||zone(o)===z)&&o.score>=min&&!(no2&&o.niveau==="m2_exige");
+  }).sort(function(a,b){return b.score-a.score});
+}
+
+function render(){
+  var list=$("list");list.textContent="";
+  shown=filtered();
+  var actifs=data.offres.filter(function(o){return o.statut==="active"}).length;
+  $("count").textContent=shown.length+" offre"+(shown.length>1?"s":"")+" affichée"+(shown.length>1?"s":"")+" sur "+actifs;
+  if(!shown.length)list.appendChild(el("p","empty","Aucune offre ne correspond à ces filtres."));
+  shown.forEach(function(o){list.appendChild(card(o,false))});
+  var exp=data.offres.filter(function(o){return o.statut==="expiree"});
+  $("arch-wrap").hidden=!exp.length;
+  if(exp.length){
+    $("arch-sum").textContent="Archive : "+exp.length+" offre"+(exp.length>1?"s":"")+" expirée"+(exp.length>1?"s":"");
+    var ar=$("arch");ar.textContent="";exp.forEach(function(o){ar.appendChild(card(o,true))});
+  }
+}
+
+function news(){
+  var maj=data.derniere_mise_a_jour;
+  var n=data.offres.filter(function(o){return o.statut==="active"&&maj&&o.premiere_detection===maj});
+  $("news").hidden=false;var ul=$("news-list");ul.textContent="";
+  if(!n.length){ul.appendChild(el("li",null,"Aucune nouvelle offre depuis le dernier passage."));return}
+  n.sort(function(a,b){return b.score-a.score}).forEach(function(o){
+    var li=el("li"),a=el("a",null,o.titre);a.href="#o-"+o.id;
+    li.appendChild(a);li.appendChild(document.createTextNode(" — "+o.entreprise+", "+o.ville+" ("+o.score+")"));ul.appendChild(li);
+  });
+}
+
+function csvCell(v){return '"'+String(v==null?"":v).replace(/"/g,'""')+'"'}
+function exportCsv(){
+  var cols=["titre","entreprise","ville","region","metier","date_debut","duree","niveau","score","pourquoi","vigilance","angle","url","type_source","statut"];
+  var lines=[cols.concat(["suivi"]).map(csvCell).join(";")];
+  shown.forEach(function(o){lines.push(cols.map(function(k){return csvCell(o[k])}).concat([csvCell(SUIVI[suivi[o.id]||""])]).join(";"))});
+  var blob=new Blob(["﻿"+lines.join("\r\n")],{type:"text/csv;charset=utf-8"});
+  var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="radar-stages.csv";
+  document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},1000);
+}
+
+function start(d){
+  data=d;
+  var actifs=d.offres.filter(function(o){return o.statut==="active"}).length;
+  $("meta").textContent="Mise à jour : "+fmtDate(d.derniere_mise_a_jour)+" · "+actifs+" offre"+(actifs>1?"s":"")+" active"+(actifs>1?"s":"");
+  news();render();
+}
+
+initTheme();load();
+["f-metier","f-zone","f-score","f-m2"].forEach(function(id){$(id).addEventListener("input",render)});
+$("csv").addEventListener("click",exportCsv);
+fetch("data/offres.json",{cache:"no-cache"}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(start).catch(function(){
+  $("meta").textContent="";$("list").appendChild(el("p","err","Impossible de charger data/offres.json. Si la page est ouverte depuis un fichier local, la servir via un serveur HTTP."));
+});
+})();
+</script>
+</body>
+</html>

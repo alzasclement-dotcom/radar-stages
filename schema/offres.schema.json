@@ -1,0 +1,63 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Radar Stages - data/offres.json",
+  "description": "Documentation du schema. La validation reelle est faite par scripts/valider.py (sans dependance).",
+  "type": "object",
+  "required": ["derniere_mise_a_jour", "journal", "offres"],
+  "additionalProperties": false,
+  "properties": {
+    "derniere_mise_a_jour": { "type": ["string", "null"], "description": "Date ISO AAAA-MM-JJ" },
+    "journal": {
+      "type": "array",
+      "description": "Une entree par passage, les 30 dernieres sont conservees.",
+      "items": {
+        "type": "object",
+        "required": ["date", "ajoutees", "expirees", "sources_inaccessibles"],
+        "additionalProperties": false,
+        "properties": {
+          "date": { "type": "string" },
+          "ajoutees": { "type": "integer", "minimum": 0 },
+          "expirees": { "type": "integer", "minimum": 0 },
+          "sources_inaccessibles": { "type": "array", "items": { "type": "string" } }
+        }
+      }
+    },
+    "offres": { "type": "array", "items": { "$ref": "#/$defs/offre" } }
+  },
+  "$defs": {
+    "offre": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id", "titre", "entreprise", "ville", "region", "metier", "date_debut", "duree",
+        "niveau", "competences", "score", "pourquoi", "vigilance", "angle", "url",
+        "type_source", "date_publication", "premiere_detection", "derniere_verification", "statut"
+      ],
+      "properties": {
+        "id": { "type": "string", "description": "12 premiers caracteres du sha1 de l'URL normalisee" },
+        "titre": { "type": "string", "minLength": 1 },
+        "entreprise": { "type": "string", "minLength": 1 },
+        "ville": { "type": "string", "minLength": 1 },
+        "region": { "type": "string", "description": "Ex. Ile-de-France, Occitanie, Auvergne-Rhone-Alpes" },
+        "metier": { "enum": ["allocation", "banque_privee", "asset_management"] },
+        "date_debut": { "type": ["string", "null"], "description": "AAAA-MM-JJ ou AAAA-MM ; null = a verifier" },
+        "duree": { "type": ["integer", "null"], "description": "Duree en mois ; null = a verifier" },
+        "niveau": { "enum": ["m1_accepte", "non_precise", "m2_exige"] },
+        "competences": {
+          "type": "array",
+          "items": { "enum": ["excel_vba_python", "relation_patrimoniale", "assurance_vie", "marches"] }
+        },
+        "score": { "type": "integer", "minimum": 0, "maximum": 100, "description": "Recalcule par le script, jamais saisi a la main" },
+        "pourquoi": { "type": "string" },
+        "vigilance": { "type": "string" },
+        "angle": { "type": "string" },
+        "url": { "type": "string", "pattern": "^https?://" },
+        "type_source": { "enum": ["officielle", "agregateur"] },
+        "date_publication": { "type": ["string", "null"] },
+        "premiere_detection": { "type": "string" },
+        "derniere_verification": { "type": "string" },
+        "statut": { "enum": ["active", "expiree"] }
+      }
+    }
+  }
+}
