@@ -40,6 +40,8 @@ Cherche d'abord les offres publiées depuis la veille, puis celles des 30 dernie
 3. **Sites carrières officiels** des cibles (voir `profil.md`) et des caisses régionales (Crédit Agricole du Languedoc, Banque Populaire du Sud, Caisse d'Épargne Languedoc-Roussillon, CIC, BNP à Montpellier).
 4. **Indeed, HelloWork, APEC, France Travail, Meteojob, Jobteaser** : par la recherche web (extraits) pour repérer ; ouvre la page de l'offre avant de la garder.
 
+L'onglet « Recherche LinkedIn » de la page se remplit tout seul : il liste les offres dont l'URL est sur linkedin.com. Garde donc le lien LinkedIn (`/jobs/view/<id>`) dans `url` pour les offres trouvées là, tant que la page officielle de l'employeur n'a pas été retrouvée.
+
 Pour chaque offre repérée sur un agrégateur, retrouve-la sur le site officiel de l'employeur quand c'est possible et garde ce lien (`type_source: "officielle"`). Sinon garde le lien de l'agrégateur avec `type_source: "agregateur"`.
 
 ### Règles d'admission

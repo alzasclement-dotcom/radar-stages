@@ -182,6 +182,7 @@ function matches(o){
 
 var TABS=[
   {id:"todo",label:"À traiter",note:""},
+  {id:"li",label:"Recherche LinkedIn",note:"Offres trouvées sur LinkedIn, les plus récentes d'abord puis les plus compatibles avec votre profil. Cette vue reprend aussi des offres de l'onglet À traiter."},
   {id:"cand",label:"Candidatures",note:"Offres où vous avez postulé, avez un entretien ou avez reçu un refus."},
   {id:"no",label:"Pas intéressé",note:"Offres écartées. Vous pouvez les remettre dans la liste."},
   {id:"amb",label:"Ambitieuses",note:"Maisons très sélectives, qui recrutent surtout en grandes écoles. Limitées à 10 % des offres à traiter."},
@@ -197,13 +198,18 @@ function setTab(id,focus){
 
 function buckets(){
   var active=data.offres.filter(function(o){return o.statut==="active"&&matches(o)}).sort(sorter());
-  var B={todo:[],cand:[],no:[],amb:[],arch:[],ambHidden:0};
+  var B={todo:[],li:[],cand:[],no:[],amb:[],arch:[],ambHidden:0};
   active.forEach(function(o){
     var s=statut(o);
     if(s==="pas_interesse")B.no.push(o);
     else if(CANDIDAT[s])B.cand.push(o);
     else if(o.ambitieuse)B.amb.push(o);
     else B.todo.push(o);
+    if(!CANDIDAT[s]&&s!=="pas_interesse"&&!o.ambitieuse&&/linkedin\.com/.test(o.url))B.li.push(o);
+  });
+  B.li.sort(function(a,b){
+    var x=age(a),y=age(b);x=x===null?99:Math.floor(x/7);y=y===null?99:Math.floor(y/7);
+    return x-y||b.score-a.score;
   });
   var count={};
   B.todo=B.todo.filter(function(o){var k=norm(o.entreprise);count[k]=(count[k]||0)+1;return count[k]<=MAX_PAR_EMPLOYEUR});
@@ -212,6 +218,25 @@ function buckets(){
   B.ambHidden=Math.max(0,B.amb.length-cap);B.amb=B.amb.slice(0,cap);
   B.arch=data.offres.filter(function(o){return o.statut==="expiree"});
   return B;
+}
+
+var LI_SEARCHES=[
+  ["Gestion de patrimoine, CGP, conseiller patrimonial","stage \"gestion de patrimoine\" OR CGP OR \"conseiller patrimonial\"","France"],
+  ["Investor relations, distribution, partenariats CGP","stage \"investor relations\" OR \"relations investisseurs\" OR \"partenariats CGP\" OR \"distribution fonds\"","France"],
+  ["Banque privée, family office, gestion pilotée","stage \"banque privée\" OR \"gestion privée\" OR \"family office\" OR \"gestion pilotée\"","France"],
+  ["Épargne, SCPI, assurance vie, plateformes d'investissement","stage épargne OR SCPI OR \"assurance vie\" OR \"plateforme d'investissement\"","France"],
+  ["Montpellier et alentours : finance, patrimoine","stage finance OR patrimoine OR investissement OR banque","Montpellier"]
+];
+function linkedinSearches(){
+  var box=el("section","panel");box.appendChild(el("h2",null,"Lancer une recherche LinkedIn (7 derniers jours)"));
+  box.appendChild(el("p","note","Stages, publiés cette semaine, plus récents d'abord. Les résultats s'ouvrent sur LinkedIn dans un nouvel onglet."));
+  var ul=el("ul");ul.style.margin="0";ul.style.paddingLeft="20px";
+  LI_SEARCHES.forEach(function(q){
+    var li=el("li"),a=el("a",null,q[0]);
+    a.href="https://www.linkedin.com/jobs/search/?keywords="+encodeURIComponent(q[1])+"&location="+encodeURIComponent(q[2])+"&f_JT=I&f_TPR=r604800&sortBy=DD"+(q[2]==="Montpellier"?"&distance=50":"");
+    a.target="_blank";a.rel="noopener noreferrer";li.appendChild(a);ul.appendChild(li);
+  });
+  box.appendChild(ul);return box;
 }
 
 function renderTabs(B){
@@ -241,8 +266,9 @@ function render(){
   if(tab==="amb"&&B.ambHidden)note+=" "+B.ambHidden+" autre"+(B.ambHidden>1?"s":"")+" masquée"+(B.ambHidden>1?"s":"")+".";
   $("tab-note").textContent=note;$("tab-note").hidden=!note;
   $("news").hidden=tab!=="todo"||!newsCount;
+  if(tab==="li")list.appendChild(linkedinSearches());
   if(!items.length){
-    var msg={todo:"Aucune offre à traiter avec ces filtres.",cand:"Aucune candidature pour l'instant. Passez une offre en « Postulé » depuis l'onglet À traiter.",no:"Aucune offre écartée.",amb:"Aucune offre ambitieuse avec ces filtres.",arch:"Aucune offre expirée pour l'instant."}[tab];
+    var msg={li:"Aucune offre LinkedIn avec ces filtres.",todo:"Aucune offre à traiter avec ces filtres.",cand:"Aucune candidature pour l'instant. Passez une offre en « Postulé » depuis l'onglet À traiter.",no:"Aucune offre écartée.",amb:"Aucune offre ambitieuse avec ces filtres.",arch:"Aucune offre expirée pour l'instant."}[tab];
     list.appendChild(el("p","empty",msg));return;
   }
   if(tab==="cand"){
