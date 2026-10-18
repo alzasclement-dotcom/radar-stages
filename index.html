@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Radar Stages</title>
-<meta name="description" content="Stages en allocation d'actifs, banque privée et asset management, mis à jour chaque matin.">
+<meta name="description" content="Stages en gestion de patrimoine, investissement et distribution de fonds, mis à jour chaque matin.">
 <style>
 :root{--bg:#f7f7f5;--surface:#fff;--text:#1c1f24;--muted:#5d6570;--line:#dcdfe3;--accent:#1f4e8c;--accent-ink:#fff;--warn:#8a4b00;--warn-bg:#fdf1e0}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171b;--surface:#1c2025;--text:#e8eaed;--muted:#9aa3ad;--line:#2d333a;--accent:#7fb0ee;--accent-ink:#0d1621;--warn:#f0b66b;--warn-bg:#2b2113}}
@@ -17,7 +17,6 @@ h1{font-size:1.5rem;margin:0}
 h2{font-size:1.05rem;margin:0 0 8px}
 .meta{color:var(--muted);margin:4px 0 0;font-size:.9rem}
 a{color:var(--accent)}
-.btn.primary{color:var(--accent-ink)}
 button,select,input{font:inherit;color:inherit}
 button,.btn{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 12px;cursor:pointer;text-decoration:none;display:inline-block}
 button:hover,.btn:hover{border-color:var(--accent)}
@@ -30,6 +29,8 @@ button:hover,.btn:hover{border-color:var(--accent)}
 .filters label.check{flex-direction:row;align-items:center;gap:6px;padding-bottom:6px}
 .filters select,.filters input[type=number]{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 8px;min-width:8rem}
 .bar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin:16px 0 8px}
+.section-h{margin:24px 0 8px}
+.note{color:var(--muted);font-size:.88rem;margin:0 0 8px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;margin:0 0 12px}
 .card.mini{padding:10px 16px}
 .top{display:flex;gap:12px;justify-content:space-between;align-items:flex-start}
@@ -41,6 +42,7 @@ button:hover,.btn:hover{border-color:var(--accent)}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;padding:0;list-style:none}
 .tags li{font-size:.8rem;border:1px solid var(--line);border-radius:4px;padding:1px 8px;color:var(--muted)}
 .tags li.warn{background:var(--warn-bg);color:var(--warn);border-color:var(--warn)}
+.tags li.fresh{border-color:var(--accent);color:var(--accent)}
 .card dl{margin:8px 0;display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;font-size:.92rem}
 .card dt{color:var(--muted)}
 .card dd{margin:0;overflow-wrap:anywhere}
@@ -65,24 +67,29 @@ details.arch>summary{cursor:pointer;font-weight:600;padding:8px 0}
   <section class="panel news" id="news" hidden aria-labelledby="news-h"><h2 id="news-h">Nouveautés du jour</h2><ul id="news-list"></ul></section>
   <section class="panel" aria-label="Filtres">
     <div class="filters">
-      <label>Métier<select id="f-metier"><option value="">Tous</option><option value="allocation">Allocation / sélection de fonds</option><option value="banque_privee">Banque privée / patrimoine</option><option value="asset_management">Asset management</option></select></label>
+      <label>Métier<select id="f-metier"><option value="">Tous</option><option value="sales_ir">Sales / investor relations / distribution</option><option value="allocation">Allocation / conseil en investissement</option><option value="patrimoine">Gestion de patrimoine / banque privée</option><option value="asset_management">Asset management</option><option value="epargne_assurance">Épargne / assurance</option></select></label>
       <label>Zone<select id="f-zone"><option value="">Toutes</option><option value="paris">Paris / Île-de-France</option><option value="montpellier">Montpellier / Occitanie</option><option value="autre">Reste de la France</option></select></label>
       <label>Score minimum<input type="number" id="f-score" min="0" max="100" step="5" value="0"></label>
-      <label class="check"><input type="checkbox" id="f-m2"> Masquer M2 exigé</label>
+      <label>Tri<select id="f-tri"><option value="score">Meilleur score</option><option value="recent">Plus récentes</option></select></label>
+      <label class="check"><input type="checkbox" id="f-30"> Publiées il y a moins de 30 jours</label>
     </div>
   </section>
+  <section id="mine-wrap" hidden aria-labelledby="mine-h"><h2 class="section-h" id="mine-h">Mes candidatures</h2><div id="mine"></div></section>
   <div class="bar"><h2 id="count" aria-live="polite" style="margin:0"></h2><button type="button" id="csv">Exporter en CSV</button></div>
   <div id="list"></div>
+  <section id="amb-wrap" hidden aria-labelledby="amb-h"><h2 class="section-h" id="amb-h">Ambitieuses</h2><p class="note" id="amb-note"></p><div id="amb"></div></section>
   <details class="arch panel" id="arch-wrap" hidden><summary id="arch-sum"></summary><div id="arch"></div></details>
 </main>
 </div>
 <script>
 (function(){
 "use strict";
-var METIERS={allocation:"Allocation / sélection de fonds",banque_privee:"Banque privée / patrimoine",asset_management:"Asset management"};
-var NIVEAUX={m1_accepte:"Bac+4 / M1 accepté",non_precise:"Niveau non précisé",m2_exige:"Niveau M2 demandé"};
+var METIERS={sales_ir:"Sales / investor relations",allocation:"Allocation / conseil en investissement",patrimoine:"Gestion de patrimoine / banque privée",asset_management:"Asset management",epargne_assurance:"Épargne / assurance"};
+var NIVEAUX={bac3_4:"Bac+3 / Bac+4 accepté",bac4_5:"Bac+4/5",non_precise:"Niveau à vérifier"};
 var SUIVI={"":"Aucun suivi",a_postuler:"À postuler",postule:"Postulé",entretien:"Entretien",refuse:"Refusé",pas_interesse:"Pas intéressé"};
+var CANDIDAT={postule:1,entretien:1,refuse:1};
 var MOIS=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
+var MAX_PAR_EMPLOYEUR=5, PART_AMBITIEUSES=0.10;
 var data=null, shown=[], suivi={};
 
 function $(id){return document.getElementById(id)}
@@ -91,6 +98,13 @@ function norm(s){return String(s||"").normalize("NFD").replace(/[̀-ͯ]/g,"").to
 function zone(o){var r=norm(o.region);return r==="ile-de-france"?"paris":r==="occitanie"?"montpellier":"autre"}
 function fmtMois(d){if(!d)return null;var m=/^(\d{4})-(\d{2})/.exec(d);return m?MOIS[+m[2]-1]+" "+m[1]:d}
 function fmtDate(d){var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d||"");return m?(+m[3])+" "+MOIS[+m[2]-1]+" "+m[1]:"—"}
+function age(o){
+  var m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(o.date_publication||"");if(!m)return null;
+  var d=Date.UTC(+m[1],+m[2]-1,+m[3]),n=new Date(),t=Date.UTC(n.getFullYear(),n.getMonth(),n.getDate());
+  return Math.max(0,Math.round((t-d)/864e5));
+}
+function fmtAge(a){return a===0?"aujourd'hui":a===1?"hier":"il y a "+a+" jours"}
+function statut(o){return suivi[o.id]||(o.deja_postule?"postule":"")}
 
 function load(){try{suivi=JSON.parse(localStorage.getItem("radar-suivi")||"{}")||{}}catch(e){suivi={}}}
 function save(){try{localStorage.setItem("radar-suivi",JSON.stringify(suivi))}catch(e){}}
@@ -110,7 +124,7 @@ function initTheme(){
 function pill(o){var p=el("span","pill"+(o.score>=80?" hi":o.score<60?" lo":""),String(o.score));p.title="Score d'adéquation sur 100";p.setAttribute("aria-label","Score "+o.score+" sur 100");return p}
 
 function card(o,expired){
-  var s=suivi[o.id]||"";
+  var s=statut(o);
   var c=el("article","card"+(s==="pas_interesse"?" mini":""));c.id="o-"+o.id;
   var top=el("div","top"),l=el("div");
   l.appendChild(el("h3",null,o.titre));
@@ -121,44 +135,73 @@ function card(o,expired){
     b.addEventListener("click",function(){delete suivi[o.id];save();render()});
     c.appendChild(b);return c;
   }
-  var tags=el("ul","tags");
+  var tags=el("ul","tags"),a=age(o);
+  if(a!==null)tags.appendChild(el("li","fresh","Publiée "+fmtAge(a)+(o.date_estimee?" (estimé)":"")));
+  else tags.appendChild(el("li","warn","Date de publication inconnue"));
   tags.appendChild(el("li",null,METIERS[o.metier]||o.metier));
-  tags.appendChild(el("li",o.niveau==="m2_exige"?"warn":null,NIVEAUX[o.niveau]||o.niveau));
+  tags.appendChild(el("li",o.niveau==="non_precise"?"warn":null,NIVEAUX[o.niveau]||o.niveau));
   if(o.type_source==="agregateur")tags.appendChild(el("li","warn","Source : agrégateur"));
-  if(!o.date_debut)tags.appendChild(el("li","warn","Date à vérifier"));
+  if(!o.date_debut)tags.appendChild(el("li","warn","Date de début à vérifier"));
   c.appendChild(tags);
   var dl=el("dl");
   function row(k,v){dl.appendChild(el("dt",null,k));dl.appendChild(el("dd",null,v))}
   row("Début",(fmtMois(o.date_debut)||"à vérifier")+(o.duree?" · "+o.duree+" mois":""));
   row("Pourquoi",o.pourquoi);row("Vigilance",o.vigilance);row("Angle",o.angle);
   c.appendChild(dl);
-  var a=el("div","actions");
+  var act=el("div","actions");
   var link=el("a","btn primary","Voir l'offre");link.href=o.url;link.target="_blank";link.rel="noopener noreferrer";
-  link.setAttribute("aria-label","Voir l'offre : "+o.titre+" (nouvel onglet)");a.appendChild(link);
+  link.setAttribute("aria-label","Voir l'offre : "+o.titre+" (nouvel onglet)");act.appendChild(link);
   if(!expired){
     var lab=el("label",null,"Suivi : ");lab.className="sub";
     var sel=el("select");
     Object.keys(SUIVI).forEach(function(k){var op=el("option",null,SUIVI[k]);op.value=k;if(k===s)op.selected=true;sel.appendChild(op)});
-    sel.addEventListener("change",function(){if(sel.value)suivi[o.id]=sel.value;else delete suivi[o.id];save();render()});
-    lab.appendChild(sel);a.appendChild(lab);
+    sel.addEventListener("change",function(){if(sel.value)suivi[o.id]=sel.value;else suivi[o.id]="";save();render()});
+    lab.appendChild(sel);act.appendChild(lab);
   }
-  c.appendChild(a);return c;
+  c.appendChild(act);return c;
 }
 
-function filtered(){
-  var m=$("f-metier").value,z=$("f-zone").value,min=+$("f-score").value||0,no2=$("f-m2").checked;
-  return data.offres.filter(function(o){
-    return o.statut==="active"&&(!m||o.metier===m)&&(!z||zone(o)===z)&&o.score>=min&&!(no2&&o.niveau==="m2_exige");
-  }).sort(function(a,b){return b.score-a.score});
+function sorter(){
+  var t=$("f-tri").value;
+  return function(a,b){
+    if(t==="recent"){
+      var x=age(a),y=age(b);x=x===null?1e9:x;y=y===null?1e9:y;
+      if(x!==y)return x-y;
+    }
+    return b.score-a.score;
+  };
+}
+
+function matches(o){
+  var m=$("f-metier").value,z=$("f-zone").value,min=+$("f-score").value||0,r=$("f-30").checked,a=age(o);
+  return (!m||o.metier===m)&&(!z||zone(o)===z)&&o.score>=min&&(!r||(a!==null&&a<30));
 }
 
 function render(){
   var list=$("list");list.textContent="";
-  shown=filtered();
+  var all=data.offres.filter(function(o){return o.statut==="active"&&matches(o)}).sort(sorter());
+  var mine=all.filter(function(o){return CANDIDAT[statut(o)]});
+  var rest=all.filter(function(o){return !CANDIDAT[statut(o)]});
+  var count={};
+  var main=rest.filter(function(o){
+    if(o.ambitieuse)return false;
+    var k=norm(o.entreprise);count[k]=(count[k]||0)+1;return count[k]<=MAX_PAR_EMPLOYEUR;
+  });
+  var capAmb=Math.max(1,Math.floor(PART_AMBITIEUSES*main.length/(1-PART_AMBITIEUSES)));
+  var ambAll=rest.filter(function(o){return o.ambitieuse});
+  var amb=ambAll.slice(0,capAmb);
+  shown=mine.concat(main,amb);
   var actifs=data.offres.filter(function(o){return o.statut==="active"}).length;
-  $("count").textContent=shown.length+" offre"+(shown.length>1?"s":"")+" affichée"+(shown.length>1?"s":"")+" sur "+actifs;
-  if(!shown.length)list.appendChild(el("p","empty","Aucune offre ne correspond à ces filtres."));
-  shown.forEach(function(o){list.appendChild(card(o,false))});
+  $("count").textContent=main.length+" offre"+(main.length>1?"s":"")+" affichée"+(main.length>1?"s":"")+" sur "+actifs;
+  if(!main.length)list.appendChild(el("p","empty","Aucune offre ne correspond à ces filtres."));
+  main.forEach(function(o){list.appendChild(card(o,false))});
+  $("mine-wrap").hidden=!mine.length;$("mine").textContent="";
+  mine.forEach(function(o){$("mine").appendChild(card(o,false))});
+  $("amb-wrap").hidden=!ambAll.length;$("amb").textContent="";
+  if(ambAll.length){
+    $("amb-note").textContent="Maisons très sélectives, qui recrutent surtout en grandes écoles. Limitées à 10 % des offres affichées"+(ambAll.length>amb.length?" ("+(ambAll.length-amb.length)+" autre"+(ambAll.length-amb.length>1?"s":"")+" masquée"+(ambAll.length-amb.length>1?"s":"")+").":".");
+    amb.forEach(function(o){$("amb").appendChild(card(o,false))});
+  }
   var exp=data.offres.filter(function(o){return o.statut==="expiree"});
   $("arch-wrap").hidden=!exp.length;
   if(exp.length){
@@ -169,20 +212,27 @@ function render(){
 
 function news(){
   var maj=data.derniere_mise_a_jour;
-  var n=data.offres.filter(function(o){return o.statut==="active"&&maj&&o.premiere_detection===maj});
+  var n=data.offres.filter(function(o){return o.statut==="active"&&!o.deja_postule&&maj&&o.premiere_detection===maj});
   $("news").hidden=false;var ul=$("news-list");ul.textContent="";
   if(!n.length){ul.appendChild(el("li",null,"Aucune nouvelle offre depuis le dernier passage."));return}
-  n.sort(function(a,b){return b.score-a.score}).forEach(function(o){
+  n.sort(function(a,b){
+    var x=age(a),y=age(b);x=x===null?1e9:x;y=y===null?1e9:y;
+    return x-y||b.score-a.score;
+  });
+  var vues=0;
+  n.forEach(function(o){
+    if(vues>=12)return;vues++;
     var li=el("li"),a=el("a",null,o.titre);a.href="#o-"+o.id;
     li.appendChild(a);li.appendChild(document.createTextNode(" — "+o.entreprise+", "+o.ville+" ("+o.score+")"));ul.appendChild(li);
   });
+  if(n.length>vues)ul.appendChild(el("li",null,"… et "+(n.length-vues)+" autre"+(n.length-vues>1?"s":"")+" ci-dessous."));
 }
 
 function csvCell(v){return '"'+String(v==null?"":v).replace(/"/g,'""')+'"'}
 function exportCsv(){
-  var cols=["titre","entreprise","ville","region","metier","date_debut","duree","niveau","score","pourquoi","vigilance","angle","url","type_source","statut"];
+  var cols=["titre","entreprise","ville","region","metier","date_debut","duree","niveau","score","date_publication","pourquoi","vigilance","angle","url","type_source","statut"];
   var lines=[cols.concat(["suivi"]).map(csvCell).join(";")];
-  shown.forEach(function(o){lines.push(cols.map(function(k){return csvCell(o[k])}).concat([csvCell(SUIVI[suivi[o.id]||""])]).join(";"))});
+  shown.forEach(function(o){lines.push(cols.map(function(k){return csvCell(o[k])}).concat([csvCell(SUIVI[statut(o)]||"")]).join(";"))});
   var blob=new Blob(["﻿"+lines.join("\r\n")],{type:"text/csv;charset=utf-8"});
   var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="radar-stages.csv";
   document.body.appendChild(a);a.click();a.remove();setTimeout(function(){URL.revokeObjectURL(a.href)},1000);
@@ -196,7 +246,7 @@ function start(d){
 }
 
 initTheme();load();
-["f-metier","f-zone","f-score","f-m2"].forEach(function(id){$(id).addEventListener("input",render)});
+["f-metier","f-zone","f-score","f-tri","f-30"].forEach(function(id){$(id).addEventListener("input",render)});
 $("csv").addEventListener("click",exportCsv);
 fetch("data/offres.json",{cache:"no-cache"}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(start).catch(function(){
   $("meta").textContent="";$("list").appendChild(el("p","err","Impossible de charger data/offres.json. Si la page est ouverte depuis un fichier local, la servir via un serveur HTTP."));

@@ -1,7 +1,8 @@
 """Validation de data/offres.json.
 
-Verifie le schema, refuse toute offre sans URL, supprime les doublons
-(meme URL, ou meme entreprise + titre), recalcule id et score, trie par score.
+Verifie le schema, refuse toute offre sans URL ou de niveau exclu (M2 / Bac+5 / fin d'etudes),
+supprime les doublons (meme URL, ou meme entreprise + titre + ville), recalcule id et score
+(la fraicheur est calculee par rapport a `derniere_mise_a_jour`), trie par score.
 
 Usage : python scripts/valider.py [chemin] [--check]
   --check : ne reecrit pas le fichier (echoue s'il faudrait le modifier).
@@ -9,25 +10,35 @@ Code de sortie : 0 = ok, 1 = erreurs de schema, 2 = fichier a normaliser (--chec
 """
 import hashlib
 import json
+import math
+import re
 import sys
+from collections import Counter
 from datetime import date
 from pathlib import Path
 from urllib.parse import parse_qsl, urlencode, urlsplit, urlunsplit
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
-from score import COMPETENCES, METIER_POINTS, NIVEAU_POINTS, FENETRE_DEBUT, calculer_score, normaliser, parse_date  # noqa: E402
+from score import (COMPETENCES, DEBUT_MIN, FAMILLES, METIER_POINTS, NIVEAUX,  # noqa: E402
+                   age_jours, calculer_score, normaliser, parse_date)
 
 DEFAUT = Path(__file__).resolve().parent.parent / "data" / "offres.json"
 JOURNAL_MAX = 30
+MAX_PAR_EMPLOYEUR = 5
+PART_AMBITIEUSES = 0.10
 
 TEXTES = ("titre", "entreprise", "ville", "region", "pourquoi", "vigilance", "angle")
 CHAMPS = (
-    "id", "titre", "entreprise", "ville", "region", "metier", "date_debut", "duree", "niveau",
-    "competences", "score", "pourquoi", "vigilance", "angle", "url", "type_source",
-    "date_publication", "premiere_detection", "derniere_verification", "statut",
+    "id", "titre", "entreprise", "famille", "ambitieuse", "ville", "region", "metier", "date_debut",
+    "duree", "niveau", "competences", "score", "pourquoi", "vigilance", "angle", "url", "type_source",
+    "date_publication", "date_estimee", "premiere_detection", "derniere_verification", "statut",
+    "deja_postule",
 )
+CALCULES = ("id", "score")
 RACINE = ("derniere_mise_a_jour", "journal", "offres")
+JOURNAL_CLES = {"date", "ajoutees", "expirees", "exclues_niveau_m2", "moins_de_7_jours", "sources_inaccessibles"}
 PARAMS_SUIVI = ("utm_", "fbclid", "gclid", "source", "sourcecode")
+NIVEAU_EXCLU = re.compile(r"(?:^|-)(?:m2|bac-5|master-2|master-ii)(?:-|$)|fin-d-etudes")
 
 
 def normaliser_url(url):
@@ -64,19 +75,24 @@ def erreurs_offre(o, etiquette):
         if k not in CHAMPS:
             e.append(f"{etiquette}: champ inconnu {k!r}")
     for k in CHAMPS:
-        if k not in o and k not in ("id", "score"):
+        if k not in o and k not in CALCULES:
             e.append(f"{etiquette}: champ manquant {k!r}")
     for k in TEXTES:
         if k in o and not (isinstance(o[k], str) and o[k].strip()):
             e.append(f"{etiquette}: {k} doit etre un texte non vide")
     if o.get("metier") not in METIER_POINTS:
         e.append(f"{etiquette}: metier invalide ({o.get('metier')!r})")
-    if o.get("niveau") not in NIVEAU_POINTS:
-        e.append(f"{etiquette}: niveau invalide ({o.get('niveau')!r})")
+    if o.get("niveau") not in NIVEAUX:
+        e.append(f"{etiquette}: niveau invalide ({o.get('niveau')!r}) ; M2 / Bac+5 sont exclus")
+    if o.get("famille") not in FAMILLES:
+        e.append(f"{etiquette}: famille invalide ({o.get('famille')!r})")
     if o.get("type_source") not in ("officielle", "agregateur"):
         e.append(f"{etiquette}: type_source invalide")
     if o.get("statut") not in ("active", "expiree"):
         e.append(f"{etiquette}: statut invalide")
+    for k in ("ambitieuse", "date_estimee", "deja_postule"):
+        if k in o and not isinstance(o[k], bool):
+            e.append(f"{etiquette}: {k} doit etre un booleen")
     comp = o.get("competences")
     if not isinstance(comp, list) or any(c not in COMPETENCES for c in comp):
         e.append(f"{etiquette}: competences doit etre une liste parmi {list(COMPETENCES)}")
@@ -91,8 +107,10 @@ def erreurs_offre(o, etiquette):
         if k in o and not _date_ok(o[k]):
             e.append(f"{etiquette}: {k} doit etre AAAA-MM-JJ")
     debut = parse_date(o.get("date_debut")) if isinstance(o.get("date_debut"), str) else None
-    if o.get("statut") == "active" and debut and debut < FENETRE_DEBUT:
-        e.append(f"{etiquette}: debut {o['date_debut']} avant le {FENETRE_DEBUT} (a ecarter ou passer en expiree)")
+    if o.get("statut") == "active" and debut and debut < DEBUT_MIN:
+        e.append(f"{etiquette}: debut {o['date_debut']} avant le {DEBUT_MIN} (a ecarter ou passer en expiree)")
+    if isinstance(o.get("titre"), str) and NIVEAU_EXCLU.search(normaliser(o["titre"])):
+        e.append(f"{etiquette}: titre evoquant M2 / Bac+5 / fin d'etudes : offre exclue")
     return e
 
 
@@ -111,17 +129,18 @@ def erreurs_racine(data):
         e.append("journal doit etre une liste")
     else:
         for i, j in enumerate(journal):
-            ok = (isinstance(j, dict) and set(j) == {"date", "ajoutees", "expirees", "sources_inaccessibles"}
-                  and _date_ok(j["date"]) and isinstance(j["ajoutees"], int) and isinstance(j["expirees"], int)
-                  and isinstance(j["sources_inaccessibles"], list))
+            ok = (isinstance(j, dict) and JOURNAL_CLES <= set(j) <= JOURNAL_CLES | {"notes"}
+                  and _date_ok(j["date"]) and isinstance(j["sources_inaccessibles"], list)
+                  and all(isinstance(j[k], int) for k in ("ajoutees", "expirees", "exclues_niveau_m2", "moins_de_7_jours"))
+                  and isinstance(j.get("notes", []), list))
             if not ok:
-                e.append(f"journal[{i}]: entree invalide")
+                e.append(f"journal[{i}]: entree invalide (cles attendues : {sorted(JOURNAL_CLES)} + notes facultatif)")
     return e
 
 
 def cles_doublon(o):
     return (("url", normaliser_url(o["url"])),
-            ("titre", normaliser(o["entreprise"]) + "|" + normaliser(o["titre"])))
+            ("titre", normaliser(o["entreprise"]) + "|" + normaliser(o["titre"]) + "|" + normaliser(o["ville"])))
 
 
 def dedoublonner(offres):
@@ -139,6 +158,22 @@ def dedoublonner(offres):
     return gardees, supprimees
 
 
+def avertissements(offres, aujourdhui):
+    actives = [o for o in offres if o["statut"] == "active"]
+    w = []
+    par_employeur = Counter(normaliser(o["entreprise"]) for o in actives if not o["ambitieuse"])
+    for emp, n in par_employeur.items():
+        if n > MAX_PAR_EMPLOYEUR:
+            w.append(f"{n} offres actives chez {emp} (max {MAX_PAR_EMPLOYEUR} affichees dans la liste principale)")
+    amb = sum(o["ambitieuse"] for o in actives)
+    if actives and amb > math.ceil(PART_AMBITIEUSES * len(actives)):
+        w.append(f"{amb} offres ambitieuses sur {len(actives)} actives (la page n'en affiche que 10 %)")
+    inconnues = sum(o["date_publication"] is None for o in actives)
+    if inconnues:
+        w.append(f"{inconnues} offre(s) active(s) sans date de publication (estimer et mettre date_estimee=true)")
+    return w
+
+
 def normaliser_donnees(data):
     """Retourne (data normalisee, erreurs, messages). Les erreurs bloquent l'ecriture."""
     erreurs = erreurs_racine(data)
@@ -150,20 +185,24 @@ def normaliser_donnees(data):
         erreurs += erreurs_offre(o, etiq)
     if erreurs:
         return data, erreurs, messages
+    aujourdhui = parse_date(data["derniere_mise_a_jour"]) or date.today()
     offres = []
     for o in data["offres"]:
         o = dict(o, id=identifiant(o["url"]))
-        o["score"] = calculer_score(o)
+        o["score"] = calculer_score(o, aujourdhui)
         offres.append({k: o[k] for k in CHAMPS})
     offres, supprimees = dedoublonner(offres)
     for s in supprimees:
         messages.append(f"doublon supprime : {s['entreprise']} - {s['titre']}")
     offres.sort(key=lambda o: (o["statut"] != "active", -o["score"], o["entreprise"], o["titre"]))
-    sortie = {
-        "derniere_mise_a_jour": data["derniere_mise_a_jour"],
-        "journal": data["journal"][-JOURNAL_MAX:],
-        "offres": offres,
-    }
+    journal = [dict(j) for j in data["journal"]][-JOURNAL_MAX:]
+    recentes = sum(1 for o in offres if o["statut"] == "active" and not o["deja_postule"]
+                   and (age_jours(o, aujourdhui) is not None) and age_jours(o, aujourdhui) < 7)
+    for j in journal:
+        if j["date"] == data["derniere_mise_a_jour"]:
+            j["moins_de_7_jours"] = recentes
+    messages += ["attention : " + w for w in avertissements(offres, aujourdhui)]
+    sortie = {"derniere_mise_a_jour": data["derniere_mise_a_jour"], "journal": journal, "offres": offres}
     return sortie, [], messages
 
 

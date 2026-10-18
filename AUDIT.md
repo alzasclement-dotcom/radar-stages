@@ -1,0 +1,28 @@
+# Audit du contenu
+
+## Dernier passage : 19 octobre 2026
+
+**Résultat : 28 offres actives (21 en liste principale, 7 « Ambitieuses »). L'objectif de 40 n'est pas atteint.**
+
+### Répartition
+- Par famille : gestion patrimoniale / banque privée 12, autres (sociétés de gestion, immobilier, administrateur de fonds, VC) 6, plateformes d'investissement 3, banques de réseau 5, cabinets de CGP 2, fintechs 0, assurance 0.
+- Par zone : Île-de-France 20, Côte d'Azur 4, Occitanie 1 (Enerfip, déjà postulée), Auvergne-Rhône-Alpes 1, Nouvelle-Aquitaine 2.
+- Par fraîcheur : 11 offres publiées depuis moins de 7 jours ; 25 offres ont une date de publication estimée à partir de « il y a X jours », 3 n'en ont pas (maisons Rothschild).
+
+### Pourquoi moins de 40
+- **Le marché est étroit.** Les stages de janvier 2027 en gestion de patrimoine, distribution de fonds et plateformes d'investissement ouverts à un Bac+4 sont peu nombreux. La majorité des annonces vues exigent un Bac+5 ou un stage de fin d'études, ce qui les exclut (9 offres écartées ce jour pour ce motif : Climb PPI, Allianz GI, Sienna, Sowefund, Eiffel et quatre stages Rothschild).
+- **Peu d'offres hors Paris.** À Montpellier et en Occitanie, la recherche ne remonte que l'offre Enerfip. Les caisses régionales et les cabinets de CGP locaux publient surtout des CDI, des alternances ou des postes de conseiller clientèle de détail, hors périmètre.
+- **Fintechs d'épargne, SCPI et assurance : rien de vérifié.** Yomoni, Nalo, Goodvest, Linxea, Ramify, Moniwan, Corum, Remake, Altaroc, Lendosphere, Tudigo, Raizers, Miimosa, Primonial, Nortia, Vie Plus et Apicil n'ont remonté aucun stage ouvert aujourd'hui (ni sur Welcome to the Jungle, ni sur LinkedIn, ni par la recherche web). Corum n'a que des stages à Paris hors périmètre. WiSEED serait en procédure collective selon une source tierce.
+- **Accès limité à certaines sources.** BNP Paribas, JobTeaser et ZipRecruiter renvoient 403. Welcome to the Jungle refuse la lecture directe (403) mais se lit dans le navigateur intégré ; ses pages de listes sont peu exploitables, donc il a fallu passer par la recherche web et les pages d'offres. Les pages de LinkedIn se lisent dans le navigateur, avec un mur de connexion occasionnel (une offre, Qantara Asset Management, n'a pas pu être lue).
+- **Beaucoup d'offres restent sur LinkedIn.** Faute de temps, seules les offres des maisons Rothschild et d'Enerfip (Welcome to the Jungle) ont un lien d'origine ; les autres gardent le lien LinkedIn avec `type_source: agregateur`. Le passage quotidien doit retrouver les pages officielles des employeurs.
+
+### Ce qui reste à faire pour atteindre 40
+1. Retrouver les pages officielles des offres LinkedIn, et vérifier à cette occasion les niveaux « à vérifier ».
+2. Couvrir les cibles familles 1, 2, 4 et 5 par leurs propres pages carrières et par Welcome to the Jungle (pages entreprises), plutôt que par la recherche web.
+3. Élargir à des offres de février 2027 et à des durées de 4 à 5 mois si vous l'acceptez (aujourd'hui non retenues pour la durée).
+4. Reprendre la recherche à l'approche de la rentrée de décembre : de nombreuses sociétés publient leurs stages de début d'année en novembre.
+
+### Offres exclues ou écartées ce jour
+- Niveau M2 ou Bac+5 : 4 stages Rothschild (ingénierie patrimoniale Paris, Lyon, Bordeaux ; private equity banque privée), Climb PPI, Allianz Global Investors, Sienna Investment Managers.
+- Stage de fin d'études sans Bac+4 : Sowefund (Investor Relations), Eiffel Investment Group (Business and Client Development).
+- Non conformes : Patrimy (emploi, pas un stage), AEW (début indiqué en janvier 2026), Groupama AM (grande école exigée), BNP Paribas (page illisible, 403).
