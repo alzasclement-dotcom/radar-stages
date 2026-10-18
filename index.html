@@ -30,6 +30,10 @@ button:hover,.btn:hover{border-color:var(--accent)}
 .filters select,.filters input[type=number]{background:var(--surface);border:1px solid var(--line);border-radius:6px;padding:6px 8px;min-width:8rem}
 .bar{display:flex;justify-content:space-between;align-items:center;gap:8px;flex-wrap:wrap;margin:16px 0 8px}
 .section-h{margin:24px 0 8px}
+.tabs{display:flex;gap:4px;overflow-x:auto;border-bottom:1px solid var(--line);margin:16px 0 0;padding-bottom:0}
+.tabs button{border:0;border-bottom:3px solid transparent;border-radius:6px 6px 0 0;background:none;padding:8px 12px;white-space:nowrap;color:var(--muted)}
+.tabs button[aria-selected="true"]{border-bottom-color:var(--accent);color:var(--text);font-weight:600}
+.tabs .n{display:inline-block;min-width:1.5em;margin-left:6px;padding:0 6px;border-radius:999px;background:var(--line);font-size:.8rem;font-weight:600;color:var(--text)}
 .note{color:var(--muted);font-size:.88rem;margin:0 0 8px}
 .card{background:var(--surface);border:1px solid var(--line);border-radius:8px;padding:16px;margin:0 0 12px}
 .card.mini{padding:10px 16px}
@@ -74,11 +78,10 @@ details.arch>summary{cursor:pointer;font-weight:600;padding:8px 0}
       <label class="check"><input type="checkbox" id="f-30"> Publiées il y a moins de 30 jours</label>
     </div>
   </section>
-  <section id="mine-wrap" hidden aria-labelledby="mine-h"><h2 class="section-h" id="mine-h">Mes candidatures</h2><div id="mine"></div></section>
+  <div class="tabs" role="tablist" aria-label="Mes offres" id="tabs"></div>
   <div class="bar"><h2 id="count" aria-live="polite" style="margin:0"></h2><button type="button" id="csv">Exporter en CSV</button></div>
-  <div id="list"></div>
-  <section id="amb-wrap" hidden aria-labelledby="amb-h"><h2 class="section-h" id="amb-h">Ambitieuses</h2><p class="note" id="amb-note"></p><div id="amb"></div></section>
-  <details class="arch panel" id="arch-wrap" hidden><summary id="arch-sum"></summary><div id="arch"></div></details>
+  <p class="note" id="tab-note"></p>
+  <div id="list" role="tabpanel"></div>
 </main>
 </div>
 <script>
@@ -90,7 +93,7 @@ var SUIVI={"":"Aucun suivi",a_postuler:"À postuler",postule:"Postulé",entretie
 var CANDIDAT={postule:1,entretien:1,refuse:1};
 var MOIS=["janvier","février","mars","avril","mai","juin","juillet","août","septembre","octobre","novembre","décembre"];
 var MAX_PAR_EMPLOYEUR=5, PART_AMBITIEUSES=0.10;
-var data=null, shown=[], suivi={};
+var data=null, shown=[], suivi={}, newsCount=0;
 
 function $(id){return document.getElementById(id)}
 function el(tag,cls,text){var e=document.createElement(tag);if(cls)e.className=cls;if(text!=null)e.textContent=text;return e}
@@ -177,43 +180,86 @@ function matches(o){
   return (!m||o.metier===m)&&(!z||zone(o)===z)&&o.score>=min&&(!r||(a!==null&&a<30));
 }
 
-function render(){
-  var list=$("list");list.textContent="";
-  var all=data.offres.filter(function(o){return o.statut==="active"&&matches(o)}).sort(sorter());
-  var mine=all.filter(function(o){return CANDIDAT[statut(o)]});
-  var rest=all.filter(function(o){return !CANDIDAT[statut(o)]});
-  var count={};
-  var main=rest.filter(function(o){
-    if(o.ambitieuse)return false;
-    var k=norm(o.entreprise);count[k]=(count[k]||0)+1;return count[k]<=MAX_PAR_EMPLOYEUR;
+var TABS=[
+  {id:"todo",label:"À traiter",note:""},
+  {id:"cand",label:"Candidatures",note:"Offres où vous avez postulé, avez un entretien ou avez reçu un refus."},
+  {id:"no",label:"Pas intéressé",note:"Offres écartées. Vous pouvez les remettre dans la liste."},
+  {id:"amb",label:"Ambitieuses",note:"Maisons très sélectives, qui recrutent surtout en grandes écoles. Limitées à 10 % des offres à traiter."},
+  {id:"arch",label:"Archive",note:"Offres qui ne sont plus en ligne."}
+];
+var tab="todo";
+function loadTab(){try{var t=localStorage.getItem("radar-onglet");if(TABS.some(function(x){return x.id===t}))tab=t}catch(e){}}
+function setTab(id,focus){
+  tab=id;try{localStorage.setItem("radar-onglet",id)}catch(e){}
+  render();
+  if(focus){var b=document.querySelector('#tabs [aria-selected="true"]');if(b)b.focus()}
+}
+
+function buckets(){
+  var active=data.offres.filter(function(o){return o.statut==="active"&&matches(o)}).sort(sorter());
+  var B={todo:[],cand:[],no:[],amb:[],arch:[],ambHidden:0};
+  active.forEach(function(o){
+    var s=statut(o);
+    if(s==="pas_interesse")B.no.push(o);
+    else if(CANDIDAT[s])B.cand.push(o);
+    else if(o.ambitieuse)B.amb.push(o);
+    else B.todo.push(o);
   });
-  var capAmb=Math.max(1,Math.floor(PART_AMBITIEUSES*main.length/(1-PART_AMBITIEUSES)));
-  var ambAll=rest.filter(function(o){return o.ambitieuse});
-  var amb=ambAll.slice(0,capAmb);
-  shown=mine.concat(main,amb);
-  var actifs=data.offres.filter(function(o){return o.statut==="active"}).length;
-  $("count").textContent=main.length+" offre"+(main.length>1?"s":"")+" affichée"+(main.length>1?"s":"")+" sur "+actifs;
-  if(!main.length)list.appendChild(el("p","empty","Aucune offre ne correspond à ces filtres."));
-  main.forEach(function(o){list.appendChild(card(o,false))});
-  $("mine-wrap").hidden=!mine.length;$("mine").textContent="";
-  mine.forEach(function(o){$("mine").appendChild(card(o,false))});
-  $("amb-wrap").hidden=!ambAll.length;$("amb").textContent="";
-  if(ambAll.length){
-    $("amb-note").textContent="Maisons très sélectives, qui recrutent surtout en grandes écoles. Limitées à 10 % des offres affichées"+(ambAll.length>amb.length?" ("+(ambAll.length-amb.length)+" autre"+(ambAll.length-amb.length>1?"s":"")+" masquée"+(ambAll.length-amb.length>1?"s":"")+").":".");
-    amb.forEach(function(o){$("amb").appendChild(card(o,false))});
+  var count={};
+  B.todo=B.todo.filter(function(o){var k=norm(o.entreprise);count[k]=(count[k]||0)+1;return count[k]<=MAX_PAR_EMPLOYEUR});
+  B.todo.sort(function(a,b){return (statut(b)==="a_postuler")-(statut(a)==="a_postuler")});
+  var cap=Math.max(1,Math.floor(PART_AMBITIEUSES*B.todo.length/(1-PART_AMBITIEUSES)));
+  B.ambHidden=Math.max(0,B.amb.length-cap);B.amb=B.amb.slice(0,cap);
+  B.arch=data.offres.filter(function(o){return o.statut==="expiree"});
+  return B;
+}
+
+function renderTabs(B){
+  var box=$("tabs");box.textContent="";
+  TABS.forEach(function(t,i){
+    var b=el("button",null,t.label);b.type="button";b.id="tab-"+t.id;b.setAttribute("role","tab");
+    b.setAttribute("aria-selected",t.id===tab?"true":"false");b.setAttribute("aria-controls","list");b.tabIndex=t.id===tab?0:-1;
+    b.appendChild(el("span","n",String(B[t.id].length)));
+    b.addEventListener("click",function(){setTab(t.id,false)});
+    b.addEventListener("keydown",function(e){
+      var d=e.key==="ArrowRight"?1:e.key==="ArrowLeft"?-1:0;if(!d)return;
+      e.preventDefault();setTab(TABS[(i+d+TABS.length)%TABS.length].id,true);
+    });
+    box.appendChild(b);
+  });
+  $("list").setAttribute("aria-labelledby","tab-"+tab);
+}
+
+function render(){
+  var B=buckets(),list=$("list");list.textContent="";
+  renderTabs(B);
+  var t=TABS.filter(function(x){return x.id===tab})[0],items=B[tab];
+  shown=items;
+  var total=data.offres.filter(function(o){return o.statut==="active"}).length;
+  $("count").textContent=items.length+" offre"+(items.length>1?"s":"")+(tab==="todo"?" à traiter sur "+total+" actives":"");
+  var note=t.note;
+  if(tab==="amb"&&B.ambHidden)note+=" "+B.ambHidden+" autre"+(B.ambHidden>1?"s":"")+" masquée"+(B.ambHidden>1?"s":"")+".";
+  $("tab-note").textContent=note;$("tab-note").hidden=!note;
+  $("news").hidden=tab!=="todo"||!newsCount;
+  if(!items.length){
+    var msg={todo:"Aucune offre à traiter avec ces filtres.",cand:"Aucune candidature pour l'instant. Passez une offre en « Postulé » depuis l'onglet À traiter.",no:"Aucune offre écartée.",amb:"Aucune offre ambitieuse avec ces filtres.",arch:"Aucune offre expirée pour l'instant."}[tab];
+    list.appendChild(el("p","empty",msg));return;
   }
-  var exp=data.offres.filter(function(o){return o.statut==="expiree"});
-  $("arch-wrap").hidden=!exp.length;
-  if(exp.length){
-    $("arch-sum").textContent="Archive : "+exp.length+" offre"+(exp.length>1?"s":"")+" expirée"+(exp.length>1?"s":"");
-    var ar=$("arch");ar.textContent="";exp.forEach(function(o){ar.appendChild(card(o,true))});
+  if(tab==="cand"){
+    [["entretien","Entretien"],["postule","Postulé"],["refuse","Refusé"]].forEach(function(g){
+      var sub=items.filter(function(o){return statut(o)===g[0]});if(!sub.length)return;
+      list.appendChild(el("h3","section-h",g[1]+" ("+sub.length+")"));
+      sub.forEach(function(o){list.appendChild(card(o,false))});
+    });
+    return;
   }
+  items.forEach(function(o){list.appendChild(card(o,tab==="arch"))});
 }
 
 function news(){
   var maj=data.derniere_mise_a_jour;
-  var n=data.offres.filter(function(o){return o.statut==="active"&&!o.deja_postule&&maj&&o.premiere_detection===maj});
-  $("news").hidden=false;var ul=$("news-list");ul.textContent="";
+  var n=data.offres.filter(function(o){return o.statut==="active"&&!o.deja_postule&&!suivi[o.id]&&maj&&o.premiere_detection===maj});
+  newsCount=n.length||1;$("news").hidden=false;var ul=$("news-list");ul.textContent="";
   if(!n.length){ul.appendChild(el("li",null,"Aucune nouvelle offre depuis le dernier passage."));return}
   n.sort(function(a,b){
     var x=age(a),y=age(b);x=x===null?1e9:x;y=y===null?1e9:y;
@@ -245,7 +291,7 @@ function start(d){
   news();render();
 }
 
-initTheme();load();
+initTheme();load();loadTab();
 ["f-metier","f-zone","f-score","f-tri","f-30"].forEach(function(id){$(id).addEventListener("input",render)});
 $("csv").addEventListener("click",exportCsv);
 fetch("data/offres.json",{cache:"no-cache"}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(start).catch(function(){
