@@ -46,6 +46,8 @@ button:hover,.btn:hover{border-color:var(--accent)}
 .tags{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0;padding:0;list-style:none}
 .tags li{font-size:.8rem;border:1px solid var(--line);border-radius:4px;padding:1px 8px;color:var(--muted)}
 .tags li.warn{background:var(--warn-bg);color:var(--warn);border-color:var(--warn)}
+.tags li.grp{border-color:var(--text);color:var(--text)}
+.tags li.niche{border-style:dashed;color:var(--text)}
 .tags li.fresh{border-color:var(--accent);color:var(--accent)}
 .card dl{margin:8px 0;display:grid;grid-template-columns:max-content 1fr;gap:4px 12px;font-size:.92rem}
 .card dt{color:var(--muted)}
@@ -73,6 +75,7 @@ details.arch>summary{cursor:pointer;font-weight:600;padding:8px 0}
     <div class="filters">
       <label>Métier<select id="f-metier"><option value="">Tous</option><option value="sales_ir">Sales / investor relations / distribution</option><option value="allocation">Allocation / conseil en investissement</option><option value="patrimoine">Gestion de patrimoine / banque privée</option><option value="asset_management">Asset management</option><option value="epargne_assurance">Épargne / assurance</option><option value="banque_finance">Banque / finance (entreprise, crédit, conseil)</option></select></label>
       <label>Zone<select id="f-zone"><option value="">Toutes</option><option value="paris">Paris / Île-de-France</option><option value="montpellier">Montpellier / Occitanie</option><option value="autre">Reste de la France</option></select></label>
+      <label>Employeur<select id="f-emp"><option value="">Tous</option><option value="grand_groupe">Grands groupes (AXA, BNP, Crédit Agricole, Société Générale…)</option><option value="niche">Structures spécialisées ou plus petites</option></select></label>
       <label>Score minimum<input type="number" id="f-score" min="0" max="100" step="5" value="0"></label>
       <label>Tri<select id="f-tri"><option value="score">Meilleur score</option><option value="recent">Plus récentes</option></select></label>
       <label class="check"><input type="checkbox" id="f-30"> Publiées il y a moins de 30 jours</label>
@@ -141,6 +144,7 @@ function card(o,expired){
   var tags=el("ul","tags"),a=age(o);
   if(a!==null)tags.appendChild(el("li","fresh","Publiée "+fmtAge(a)+(o.date_estimee?" (estimé)":"")));
   else tags.appendChild(el("li","warn","Date de publication inconnue"));
+  tags.appendChild(el("li",o.type_employeur==="grand_groupe"?"grp":"niche",o.type_employeur==="grand_groupe"?"Grand groupe":"Structure spécialisée"));
   tags.appendChild(el("li",null,METIERS[o.metier]||o.metier));
   tags.appendChild(el("li",o.niveau==="non_precise"?"warn":null,NIVEAUX[o.niveau]||o.niveau));
   if(o.type_source==="agregateur")tags.appendChild(el("li","warn","Source : agrégateur"));
@@ -176,8 +180,8 @@ function sorter(){
 }
 
 function matches(o){
-  var m=$("f-metier").value,z=$("f-zone").value,min=+$("f-score").value||0,r=$("f-30").checked,a=age(o);
-  return (!m||o.metier===m)&&(!z||zone(o)===z)&&o.score>=min&&(!r||(a!==null&&a<30));
+  var m=$("f-metier").value,z=$("f-zone").value,emp=$("f-emp").value,min=+$("f-score").value||0,r=$("f-30").checked,a=age(o);
+  return (!m||o.metier===m)&&(!emp||o.type_employeur===emp)&&(!z||zone(o)===z)&&o.score>=min&&(!r||(a!==null&&a<30));
 }
 
 var TABS=[
@@ -305,7 +309,7 @@ function news(){
 
 function csvCell(v){return '"'+String(v==null?"":v).replace(/"/g,'""')+'"'}
 function exportCsv(){
-  var cols=["titre","entreprise","ville","region","metier","date_debut","duree","niveau","score","date_publication","pourquoi","vigilance","angle","url","type_source","statut"];
+  var cols=["titre","entreprise","ville","region","metier","date_debut","duree","niveau","type_employeur","score","date_publication","pourquoi","vigilance","angle","url","type_source","statut"];
   var lines=[cols.concat(["suivi"]).map(csvCell).join(";")];
   shown.forEach(function(o){lines.push(cols.map(function(k){return csvCell(o[k])}).concat([csvCell(SUIVI[statut(o)]||"")]).join(";"))});
   var blob=new Blob(["﻿"+lines.join("\r\n")],{type:"text/csv;charset=utf-8"});
@@ -321,7 +325,7 @@ function start(d){
 }
 
 initTheme();load();loadTab();
-["f-metier","f-zone","f-score","f-tri","f-30"].forEach(function(id){$(id).addEventListener("input",render)});
+["f-metier","f-zone","f-emp","f-score","f-tri","f-30"].forEach(function(id){$(id).addEventListener("input",render)});
 $("csv").addEventListener("click",exportCsv);
 fetch("data/offres.json",{cache:"no-cache"}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()}).then(start).catch(function(){
   $("meta").textContent="";$("list").appendChild(el("p","err","Impossible de charger data/offres.json. Si la page est ouverte depuis un fichier local, la servir via un serveur HTTP."));

@@ -22,7 +22,7 @@ def offre(**kw):
         "pourquoi": "p", "vigilance": "v", "angle": "a", "url": "https://exemple.test/offre/1",
         "type_source": "officielle", "date_publication": "2026-10-17", "date_estimee": False,
         "premiere_detection": "2026-10-19", "derniere_verification": "2026-10-19", "statut": "active",
-        "deja_postule": False,
+        "deja_postule": False, "type_employeur": "niche",
     }
     base.update(kw)
     return base
@@ -127,7 +127,7 @@ class TestValidation(unittest.TestCase):
         self.assertEqual([o["type_source"] for o in sortie["offres"]], ["officielle"])
 
     def test_erreurs_schema(self):
-        for kw in ({"metier": "trading"}, {"famille": "x"}, {"statut": "x"}, {"duree": "6"}, {"ambitieuse": "oui"},
+        for kw in ({"metier": "trading"}, {"type_employeur": "moyen"}, {"famille": "x"}, {"statut": "x"}, {"duree": "6"}, {"ambitieuse": "oui"},
                    {"competences": ["magie"]}, {"date_debut": "janvier"}, {"date_publication": "hier"}, {"titre": " "}):
             _, err, _ = self.run_norm(donnees(offre(**kw)))
             self.assertTrue(err, kw)

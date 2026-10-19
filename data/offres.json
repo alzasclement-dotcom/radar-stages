@@ -3,10 +3,10 @@
   "journal": [
     {
       "date": "2026-10-19",
-      "ajoutees": 47,
+      "ajoutees": 45,
       "expirees": 0,
       "exclues_niveau_m2": 10,
-      "moins_de_7_jours": 35,
+      "moins_de_7_jours": 33,
       "sources_inaccessibles": [
         "group.bnpparibas (403)",
         "jobteaser.com (403)",
@@ -24,7 +24,9 @@
         "exclue : Amethis Investor Relations (stage de fin d'études Bac+5)",
         "écartées : BNP Paribas Conseiller en gestion de patrimoine (Nantes, Amiens, Paris : emplois à temps plein, pas des stages) ; BNP Paribas AM investissements durables (début immédiat) ; Crédit Agricole : aucun stage en gestion de patrimoine ou banque privée publié sur LinkedIn cette semaine",
         "périmètre élargi à la demande de l'utilisateur : banque d'entreprise, analyse de crédit, conseiller clientèle (métier banque_finance)",
-        "écartées : Crédit Agricole « Intégrez nos agences » (stage de 4 semaines), Caisse d'Épargne Grand Est Conseiller Banque et Assurances (8 semaines), Lazard Développement Gestion Privée (Bac+5 seul)"
+        "écartées : Crédit Agricole « Intégrez nos agences » (stage de 4 semaines), Caisse d'Épargne Grand Est Conseiller Banque et Assurances (8 semaines), Lazard Développement Gestion Privée (Bac+5 seul)",
+        "retiré à la demande de l'utilisateur : stages de conseiller clientèle (Société Générale Occitanie) ; aucun stage de conseiller clientèle ne sera ajouté",
+        "retiré à la demande de l'utilisateur : Banque Transatlantique, Produits structurés et couvertures (structuration : hors niveau et hors cible)"
       ]
     }
   ],
@@ -56,7 +58,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "22577b1b3799",
@@ -85,7 +88,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "f66234119983",
@@ -114,7 +118,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "b23ff05def5d",
@@ -143,7 +148,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "5d5267b6ce48",
@@ -171,7 +177,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "0b0f4dd8aa1d",
@@ -199,35 +206,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
-    },
-    {
-      "id": "4a0da6366a8e",
-      "titre": "Stagiaire Produits structurés et couvertures (F/H)",
-      "entreprise": "Banque Transatlantique",
-      "famille": "gestion_patrimoniale",
-      "ambitieuse": false,
-      "ville": "Paris",
-      "region": "Île-de-France",
-      "metier": "allocation",
-      "date_debut": "2027-01",
-      "duree": 6,
-      "niveau": "bac4_5",
-      "competences": [
-        "marches"
-      ],
-      "score": 97,
-      "pourquoi": "Sélection de produits structurés adaptés aux besoins des clients, référencement chez les assureurs-vie et accompagnement des banquiers privés : le conseil en investissement avec de la culture marchés.",
-      "vigilance": "Bac+4/5 avec spécialisation finance demandé ; sujet technique (dérivés) ; annonce publiée ce matin.",
-      "angle": "Insister sur la culture marchés (actions, ETF, obligations) et la rigueur de reporting.",
-      "url": "https://www.linkedin.com/jobs/view/4479972856",
-      "type_source": "agregateur",
-      "date_publication": "2026-10-19",
-      "date_estimee": false,
-      "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-10-19",
-      "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "8102b5796b57",
@@ -256,7 +236,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "53ab4c1f5021",
@@ -284,7 +265,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "40495500763b",
@@ -313,7 +295,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": true
+      "deja_postule": true,
+      "type_employeur": "niche"
     },
     {
       "id": "de8d26f94f75",
@@ -342,7 +325,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "3d394178d21c",
@@ -368,7 +352,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "f134afbd8299",
@@ -397,7 +382,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "365f5f11d6a9",
@@ -426,7 +412,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "5566f8dbeea1",
@@ -455,7 +442,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "36dec8844ba6",
@@ -483,7 +471,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "163644c1d34a",
@@ -511,7 +500,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "bd6fe253cd00",
@@ -539,7 +529,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "21835441ba42",
@@ -569,7 +560,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "5411a7b173eb",
@@ -597,7 +589,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "18f4131e0bab",
@@ -626,7 +619,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "c8386b5def8f",
@@ -655,7 +649,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "838b7ebdf0fa",
@@ -684,7 +679,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "ddaedca11c31",
@@ -712,7 +708,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "1ab188d697dd",
@@ -740,7 +737,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "254fc8670e53",
@@ -768,7 +766,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "71d6d2897a79",
@@ -796,7 +795,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "acd1084ee052",
@@ -824,7 +824,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "d1620e2e3a3c",
@@ -852,35 +853,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
-    },
-    {
-      "id": "9595b7d62c9d",
-      "titre": "Stage Conseiller Clientèle Particuliers",
-      "entreprise": "Société Générale",
-      "famille": "reseau_bancaire",
-      "ambitieuse": false,
-      "ville": "Occitanie",
-      "region": "Occitanie",
-      "metier": "banque_finance",
-      "date_debut": null,
-      "duree": null,
-      "niveau": "bac3_4",
-      "competences": [
-        "relation_patrimoniale"
-      ],
-      "score": 74,
-      "pourquoi": "Conseil de clients particuliers en agence (financement, épargne, retraite), stage de 4 à 6 mois ouvert dès Bac+2/3 en Occitanie : proche de votre expérience en réseau d'agences.",
-      "vigilance": "Banque de détail, peu patrimoniale ; ville précise non indiquée ; début non précisé.",
-      "angle": "Mettre en avant les objectifs commerciaux atteints en agence et la relation client.",
-      "url": "https://www.linkedin.com/jobs/view/4477099822",
-      "type_source": "agregateur",
-      "date_publication": "2026-10-16",
-      "date_estimee": true,
-      "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-10-19",
-      "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "719d39c381f1",
@@ -909,7 +883,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "157f864472df",
@@ -938,7 +913,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "6dd873fa016b",
@@ -966,7 +942,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "90473a626e98",
@@ -994,7 +971,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "c504a8360630",
@@ -1022,7 +1000,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "2e01927b7273",
@@ -1050,7 +1029,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "31b1d19ab3b4",
@@ -1078,7 +1058,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "24ec6f276cc1",
@@ -1106,7 +1087,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "abb62d06bdb2",
@@ -1134,7 +1116,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "db2fe68025f8",
@@ -1162,7 +1145,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "16055430d46e",
@@ -1190,7 +1174,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "21d8bd52c30f",
@@ -1218,7 +1203,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "75f712abfb3c",
@@ -1246,7 +1232,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "e7720654c24e",
@@ -1275,7 +1262,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "a64e4538ab52",
@@ -1303,7 +1291,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "baed0261e478",
@@ -1331,7 +1320,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "0d98049354c4",
@@ -1360,7 +1350,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "ff2a82dfe292",
@@ -1388,7 +1379,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "621792dc479e",
@@ -1416,7 +1408,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "18ad015dff2e",
@@ -1444,7 +1437,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "ce78427a333d",
@@ -1473,7 +1467,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "2e188094ac9e",
@@ -1501,7 +1496,8 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-10-19",
       "statut": "active",
-      "deja_postule": false
+      "deja_postule": false,
+      "type_employeur": "niche"
     }
   ]
 }

@@ -34,7 +34,7 @@
       "required": [
         "id", "titre", "entreprise", "famille", "ambitieuse", "ville", "region", "metier", "date_debut", "duree",
         "niveau", "competences", "score", "pourquoi", "vigilance", "angle", "url", "type_source",
-        "date_publication", "date_estimee", "premiere_detection", "derniere_verification", "statut", "deja_postule"
+        "date_publication", "date_estimee", "premiere_detection", "derniere_verification", "statut", "deja_postule", "type_employeur"
       ],
       "properties": {
         "id": { "type": "string", "description": "12 premiers caracteres du sha1 de l'URL normalisee (recalcule)" },
@@ -60,7 +60,8 @@
         "premiere_detection": { "type": "string" },
         "derniere_verification": { "type": "string" },
         "statut": { "enum": ["active", "expiree"] },
-        "deja_postule": { "type": "boolean" }
+        "deja_postule": { "type": "boolean" },
+        "type_employeur": { "enum": ["grand_groupe", "niche"], "description": "grand_groupe : AXA, BNP, Credit Agricole, Societe Generale et leurs reseaux ; niche : structures specialisees ou plus petites" }
       }
     }
   }

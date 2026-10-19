@@ -32,7 +32,7 @@ CHAMPS = (
     "id", "titre", "entreprise", "famille", "ambitieuse", "ville", "region", "metier", "date_debut",
     "duree", "niveau", "competences", "score", "pourquoi", "vigilance", "angle", "url", "type_source",
     "date_publication", "date_estimee", "premiere_detection", "derniere_verification", "statut",
-    "deja_postule",
+    "deja_postule", "type_employeur",
 )
 CALCULES = ("id", "score")
 RACINE = ("derniere_mise_a_jour", "journal", "offres")
@@ -84,6 +84,8 @@ def erreurs_offre(o, etiquette):
         e.append(f"{etiquette}: metier invalide ({o.get('metier')!r})")
     if o.get("niveau") not in NIVEAUX:
         e.append(f"{etiquette}: niveau invalide ({o.get('niveau')!r}) ; M2 / Bac+5 sont exclus")
+    if o.get("type_employeur") not in ("grand_groupe", "niche"):
+        e.append(f"{etiquette}: type_employeur invalide ({o.get('type_employeur')!r})")
     if o.get("famille") not in FAMILLES:
         e.append(f"{etiquette}: famille invalide ({o.get('famille')!r})")
     if o.get("type_source") not in ("officielle", "agregateur"):

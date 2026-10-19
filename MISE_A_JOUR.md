@@ -50,6 +50,7 @@ Pour chaque offre repérée sur un agrégateur, retrouve-la sur le site officiel
 - Début avant le 15 novembre 2026, ou date affichée périmée : écarte l'offre.
 - Date de début absente : `date_debut: null` et « à vérifier » dans `vigilance`. Date incohérente sur la page : `date_debut: null` et explique-le.
 - Emploi, CDI, alternance ou apprentissage : écarte. Stage seulement.
+- Hors cible, à écarter : conseiller clientèle en agence, produits structurés, couvertures, dérivés, trading, banque d'investissement, M&A, et toute offre trop technique pour le profil (pas de bagage en structuration).
 - Doublon (même URL, ou même entreprise + titre + ville) : n'ajoute pas.
 - **Pas plus de 5 offres d'un même employeur** dans la liste principale (les `ambitieuse: false`).
 - **Objectif : au moins 40 offres actives pertinentes.** Si tu n'y arrives pas, dis pourquoi dans `AUDIT.md`, section « Dernier passage ».
@@ -57,8 +58,9 @@ Pour chaque offre repérée sur un agrégateur, retrouve-la sur le site officiel
 ### Remplir une offre (schéma : `schema/offres.schema.json`)
 - `titre`, `entreprise`, `ville`, `region` (ex. « Île-de-France », « Occitanie »), `url`, `type_source`.
 - `famille` : `plateforme_investissement` | `fintech` | `reseau_bancaire` | `cgp` | `assurance` | `gestion_patrimoniale` | `autre`.
+- `type_employeur` : `grand_groupe` (AXA, BNP Paribas, Crédit Agricole et ses caisses, LCL, Société Générale, Caisses d'Épargne, CIC, La Banque Postale, CNP, HSBC, CACEIS) ou `niche` (structures spécialisées ou plus petites : banques privées, sociétés de gestion, cabinets de CGP, plateformes, fintechs).
 - `ambitieuse` : `true` pour les maisons prestigieuses qui recrutent surtout en grandes écoles (Rothschild, Lazard, Pictet, Edmond de Rothschild, Lombard Odier, ODDO BHF, Carmignac, UBS, JPMorgan…), sinon `false`.
-- `metier` : `sales_ir` (sales, investor relations, partenariats CGP, distribution) | `allocation` (allocation, gestion pilotée, conseil en investissement) | `patrimoine` (gestion de patrimoine, CGP, banque privée) | `asset_management` (distribution, middle office, analyse en société de gestion) | `epargne_assurance` | `banque_finance` (banque d'entreprise, analyse de crédit, conseiller clientèle en agence).
+- `metier` : `sales_ir` (sales, investor relations, partenariats CGP, distribution) | `allocation` (allocation, gestion pilotée, conseil en investissement) | `patrimoine` (gestion de patrimoine, CGP, banque privée) | `asset_management` (distribution, middle office, analyse en société de gestion) | `epargne_assurance` | `banque_finance` (banque d'entreprise, analyse de crédit ; jamais de conseiller clientèle en agence).
 - `date_debut` : `AAAA-MM-JJ` ou `AAAA-MM`, sinon `null`. `duree` : entier en mois, sinon `null`.
 - `niveau` : `bac3_4` (Bac+3 ou Bac+4 ou M1 accepté) | `bac4_5` (Bac+4/5) | `non_precise`.
 - `competences` : sous-ensemble de `excel_vba_python`, `relation_patrimoniale`, `assurance_vie`, `marches` (seulement ce que l'offre demande et qui recoupe le profil).

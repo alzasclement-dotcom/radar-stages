@@ -43,7 +43,12 @@ Sont gardées les offres « Bac+3 », « Bac+4 », « Bac+4/5 », « M1 » ou «
 Sales, investor relations, relations investisseurs ; partenariats CGP, distribution externe, business developer finance ; chargé de clientèle investisseurs, wealth / investment associate ; customer success côté épargnants, assistant produit d'investissement ; conseiller ou assistant en gestion de patrimoine, gestion pilotée, allocation.
 
 ## Périmètre élargi (demande du 19 octobre 2026)
-Sont aussi acceptés, avec un score plus bas (métier `banque_finance`) : banque d'entreprise (chargé d'affaires entreprises adjoint, attaché de clientèle entreprise, assistant chargé d'affaires), analyse de crédit et d'investissement en banque ou assurance, conseiller clientèle en agence (stage de 4 à 6 mois, Bac+2/3 à Bac+4/5). Ces postes restent des stages de finance, ouverts à un M1.
+Sont aussi acceptés, avec un score plus bas (métier `banque_finance`) : banque d'entreprise (chargé d'affaires entreprises adjoint, attaché de clientèle entreprise, assistant chargé d'affaires) et analyse de crédit ou d'investissement en banque ou assurance. Ces postes restent des stages de finance, ouverts à un M1.
+
+**Viser au-dessus d'un poste de conseiller clientèle** : les stages de conseiller clientèle particuliers en agence (Société Générale, LCL, caisses…) sont exclus. Les stages techniques de marché (produits structurés, couvertures, dérivés, trading) sont aussi exclus : le profil n'a pas ce bagage.
+
+## Grands groupes et structures spécialisées
+Chaque offre porte un `type_employeur` : `grand_groupe` (AXA, BNP Paribas, Crédit Agricole et ses caisses, LCL, Société Générale, Caisses d'Épargne, CIC, La Banque Postale, CNP, HSBC, CACEIS…) ou `niche` (structures spécialisées ou plus petites : Banque Transatlantique, Cyrus, Milleis, Natixis Wealth Management, Wormser, cabinets de CGP, plateformes d'investissement, maisons comme Lazard, Rothschild, ODDO BHF…). La page permet de filtrer et affiche un badge.
 
 ## À exclure
-Finance de marché pure (trading, structuration), banque d'investissement et M&A, audit, comptabilité, contrôle de gestion, trésorerie d'entreprise, relations investisseurs de sociétés cotées non financières, informatique, juridique, conformité, RH, communication, marketing, actuariat ; stages de moins de 4 mois (par exemple 4 ou 8 semaines).
+Finance de marché pure (trading, structuration), banque d'investissement et M&A, audit, comptabilité, contrôle de gestion, trésorerie d'entreprise, relations investisseurs de sociétés cotées non financières, informatique, juridique, conformité, RH, communication, marketing, actuariat, produits structurés et couvertures, conseiller clientèle en agence ; stages de moins de 4 mois (par exemple 4 ou 8 semaines).
