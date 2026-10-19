@@ -1,5 +1,15 @@
 # Audit du contenu
 
+## Passage élargi du lundi 19 octobre 2026 (soir)
+
+Périmètre élargi à la demande de l'utilisateur (banque d'entreprise, analyse de crédit, conseiller clientèle). **17 offres ajoutées, 52 actives au total.**
+- Méthode : 20 recherches LinkedIn sur 7 jours (AXA, Crédit Agricole, BNP Paribas, Société Générale, Natixis, Caisse d'Épargne, Banque Populaire, Crédit Mutuel/CIC, LCL, La Banque Postale, assureurs, rôles de chargé d'affaires, conseiller clientèle, analyste, gestion d'actifs, sales, Lyon, Toulouse). Environ 700 annonces vues, 181 retenues sur leur titre, 38 pages ouvertes une par une, 17 gardées.
+- Pourquoi pas des centaines : la majorité des annonces vues sont hors périmètre (informatique, juridique, RH, communication, actuariat, banque d'investissement et M&A, contrôle de gestion, conformité), ou exigent un Bac+5 ou un stage de fin d'études, ou durent moins de 4 mois (« Intégrez nos agences » 4 semaines, conseiller banque et assurances 8 semaines).
+- Non ajoutées, à votre demande possible : une vingtaine de stages « Conseiller Clientèle Particuliers » de Société Générale en agence, répartis dans toute la France (sauf un en Occitanie, déjà ajouté), et trois chez LCL dans le Var. Ce sont des postes de banque de détail, peu patrimoniaux ; les ajouter ferait grimper le compteur mais noierait les offres utiles.
+- Début en mars 2027 : plusieurs offres commencent en mars (Caisse d'Épargne Bretagne Pays de Loire, CNP, Crédit Agricole Atlantique Vendée), hors de la fenêtre habituelle ; elles ont un score plus bas sur la date.
+- Crédit Agricole d'Île-de-France « Chargé d'affaires entreprises adjoint » : publié ce matin, ouvert aux M1 en césure, début à partir de février 2027.
+
+
 ## Passage du lundi 19 octobre 2026 (après-midi)
 
 Recherches LinkedIn ciblées AXA, Crédit Agricole, BNP Paribas et banques privées, sur 24 heures et 7 jours. **7 offres ajoutées, 35 actives au total.**

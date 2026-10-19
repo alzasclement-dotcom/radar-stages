@@ -32,7 +32,7 @@ Pour chaque offre `statut: "active"` : ouvre son `url`.
 
 ## 4. Chercher de nouvelles offres, les plus récentes d'abord
 
-Cherche d'abord les offres publiées depuis la veille, puis celles des 30 derniers jours. Cible : stage dans le cadre d'un M1, 6 mois (6 à 9 acceptés), début de la mi-novembre 2026 à fin février 2027. Les familles de cibles, les métiers à repérer et les exclusions sont dans `profil.md`.
+Cherche d'abord les offres publiées depuis la veille, puis celles des 30 derniers jours. Cible : stage dans le cadre d'un M1 (périmètre élargi : voir `profil.md`, « Périmètre élargi », qui ajoute banque d'entreprise, analyse de crédit et conseiller clientèle sous le métier `banque_finance`), 6 mois (6 à 9 acceptés), début de la mi-novembre 2026 à fin février 2027. Les familles de cibles, les métiers à repérer et les exclusions sont dans `profil.md`.
 
 ### Sources, par ordre de priorité
 1. **Welcome to the Jungle** : source prioritaire. WebFetch renvoie 403 sur ce site ; les pages d'offres et d'entreprises se lisent dans le navigateur intégré (navigue sur l'URL, attends 3 secondes, lis `document.body.innerText`). Trouve les URLs par WebSearch (`allowed_domains: ["welcometothejungle.com"]`) et par les pages entreprises des cibles (`/fr/companies/<entreprise>/jobs`), et repère les entreprises similaires.
@@ -58,7 +58,7 @@ Pour chaque offre repérée sur un agrégateur, retrouve-la sur le site officiel
 - `titre`, `entreprise`, `ville`, `region` (ex. « Île-de-France », « Occitanie »), `url`, `type_source`.
 - `famille` : `plateforme_investissement` | `fintech` | `reseau_bancaire` | `cgp` | `assurance` | `gestion_patrimoniale` | `autre`.
 - `ambitieuse` : `true` pour les maisons prestigieuses qui recrutent surtout en grandes écoles (Rothschild, Lazard, Pictet, Edmond de Rothschild, Lombard Odier, ODDO BHF, Carmignac, UBS, JPMorgan…), sinon `false`.
-- `metier` : `sales_ir` (sales, investor relations, partenariats CGP, distribution) | `allocation` (allocation, gestion pilotée, conseil en investissement) | `patrimoine` (gestion de patrimoine, CGP, banque privée) | `asset_management` (distribution, middle office, analyse en société de gestion) | `epargne_assurance`.
+- `metier` : `sales_ir` (sales, investor relations, partenariats CGP, distribution) | `allocation` (allocation, gestion pilotée, conseil en investissement) | `patrimoine` (gestion de patrimoine, CGP, banque privée) | `asset_management` (distribution, middle office, analyse en société de gestion) | `epargne_assurance` | `banque_finance` (banque d'entreprise, analyse de crédit, conseiller clientèle en agence).
 - `date_debut` : `AAAA-MM-JJ` ou `AAAA-MM`, sinon `null`. `duree` : entier en mois, sinon `null`.
 - `niveau` : `bac3_4` (Bac+3 ou Bac+4 ou M1 accepté) | `bac4_5` (Bac+4/5) | `non_precise`.
 - `competences` : sous-ensemble de `excel_vba_python`, `relation_patrimoniale`, `assurance_vie`, `marches` (seulement ce que l'offre demande et qui recoupe le profil).

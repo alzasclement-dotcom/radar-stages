@@ -71,7 +71,7 @@ details.arch>summary{cursor:pointer;font-weight:600;padding:8px 0}
   <section class="panel news" id="news" hidden aria-labelledby="news-h"><h2 id="news-h">Nouveautés du jour</h2><ul id="news-list"></ul></section>
   <section class="panel" aria-label="Filtres">
     <div class="filters">
-      <label>Métier<select id="f-metier"><option value="">Tous</option><option value="sales_ir">Sales / investor relations / distribution</option><option value="allocation">Allocation / conseil en investissement</option><option value="patrimoine">Gestion de patrimoine / banque privée</option><option value="asset_management">Asset management</option><option value="epargne_assurance">Épargne / assurance</option></select></label>
+      <label>Métier<select id="f-metier"><option value="">Tous</option><option value="sales_ir">Sales / investor relations / distribution</option><option value="allocation">Allocation / conseil en investissement</option><option value="patrimoine">Gestion de patrimoine / banque privée</option><option value="asset_management">Asset management</option><option value="epargne_assurance">Épargne / assurance</option><option value="banque_finance">Banque / finance (entreprise, crédit, conseil)</option></select></label>
       <label>Zone<select id="f-zone"><option value="">Toutes</option><option value="paris">Paris / Île-de-France</option><option value="montpellier">Montpellier / Occitanie</option><option value="autre">Reste de la France</option></select></label>
       <label>Score minimum<input type="number" id="f-score" min="0" max="100" step="5" value="0"></label>
       <label>Tri<select id="f-tri"><option value="score">Meilleur score</option><option value="recent">Plus récentes</option></select></label>
@@ -87,7 +87,7 @@ details.arch>summary{cursor:pointer;font-weight:600;padding:8px 0}
 <script>
 (function(){
 "use strict";
-var METIERS={sales_ir:"Sales / investor relations",allocation:"Allocation / conseil en investissement",patrimoine:"Gestion de patrimoine / banque privée",asset_management:"Asset management",epargne_assurance:"Épargne / assurance"};
+var METIERS={sales_ir:"Sales / investor relations",allocation:"Allocation / conseil en investissement",patrimoine:"Gestion de patrimoine / banque privée",asset_management:"Asset management",epargne_assurance:"Épargne / assurance",banque_finance:"Banque / finance (entreprise, crédit, conseil)"};
 var NIVEAUX={bac3_4:"Bac+3 / Bac+4 accepté",bac4_5:"Bac+4/5",non_precise:"Niveau à vérifier"};
 var SUIVI={"":"Aucun suivi",a_postuler:"À postuler",postule:"Postulé",entretien:"Entretien",refuse:"Refusé",pas_interesse:"Pas intéressé"};
 var CANDIDAT={postule:1,entretien:1,refuse:1};

@@ -48,7 +48,7 @@ class TestScore(unittest.TestCase):
 
     def test_metiers(self):
         for m, pts in (("sales_ir", 25), ("allocation", 25), ("patrimoine", 22),
-                       ("asset_management", 18), ("epargne_assurance", 15)):
+                       ("asset_management", 18), ("epargne_assurance", 15), ("banque_finance", 10)):
             self.assertEqual(self.d(metier=m)["metier"], pts)
 
     def test_fraicheur(self):

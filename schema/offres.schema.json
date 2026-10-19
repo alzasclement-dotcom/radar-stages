@@ -44,7 +44,7 @@
         "ambitieuse": { "type": "boolean", "description": "Maison qui recrute surtout en grandes ecoles ; affichee dans la section Ambitieuses (10 % max)" },
         "ville": { "type": "string", "minLength": 1 },
         "region": { "type": "string" },
-        "metier": { "enum": ["sales_ir", "allocation", "patrimoine", "asset_management", "epargne_assurance"] },
+        "metier": { "enum": ["sales_ir", "allocation", "patrimoine", "asset_management", "epargne_assurance", "banque_finance"] },
         "date_debut": { "type": ["string", "null"], "description": "AAAA-MM-JJ ou AAAA-MM ; null = a verifier" },
         "duree": { "type": ["integer", "null"], "description": "Duree en mois ; null = a verifier" },
         "niveau": { "enum": ["bac3_4", "bac4_5", "non_precise"] },

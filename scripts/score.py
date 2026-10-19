@@ -12,6 +12,7 @@ METIER_POINTS = {
     "patrimoine": 22,          # gestion de patrimoine, CGP, banque privee regionale
     "asset_management": 18,    # distribution, middle office, analyse en societe de gestion
     "epargne_assurance": 15,   # epargne et assurance vie en agence
+    "banque_finance": 10,      # banque d'entreprise, analyse de credit, conseiller clientele, autres metiers finance
 }
 NIVEAUX = ("bac3_4", "bac4_5", "non_precise")  # bac3_4 : Bac+3 ou Bac+4 accepte
 FAMILLES = (

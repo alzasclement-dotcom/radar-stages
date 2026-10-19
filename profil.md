@@ -42,5 +42,8 @@ Sont gardées les offres « Bac+3 », « Bac+4 », « Bac+4/5 », « M1 » ou «
 ## Métiers à repérer, partout (même hors banque)
 Sales, investor relations, relations investisseurs ; partenariats CGP, distribution externe, business developer finance ; chargé de clientèle investisseurs, wealth / investment associate ; customer success côté épargnants, assistant produit d'investissement ; conseiller ou assistant en gestion de patrimoine, gestion pilotée, allocation.
 
+## Périmètre élargi (demande du 19 octobre 2026)
+Sont aussi acceptés, avec un score plus bas (métier `banque_finance`) : banque d'entreprise (chargé d'affaires entreprises adjoint, attaché de clientèle entreprise, assistant chargé d'affaires), analyse de crédit et d'investissement en banque ou assurance, conseiller clientèle en agence (stage de 4 à 6 mois, Bac+2/3 à Bac+4/5). Ces postes restent des stages de finance, ouverts à un M1.
+
 ## À exclure
-Finance de marché pure (trading, structuration), M&A, audit, comptabilité, contrôle de gestion, trésorerie d'entreprise, banque de détail sans dimension patrimoniale, relations investisseurs de sociétés cotées non financières.
+Finance de marché pure (trading, structuration), banque d'investissement et M&A, audit, comptabilité, contrôle de gestion, trésorerie d'entreprise, relations investisseurs de sociétés cotées non financières, informatique, juridique, conformité, RH, communication, marketing, actuariat ; stages de moins de 4 mois (par exemple 4 ou 8 semaines).
