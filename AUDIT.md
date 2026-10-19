@@ -1,5 +1,15 @@
 # Audit du contenu
 
+## Passage du lundi 19 octobre 2026 (après-midi)
+
+Recherches LinkedIn ciblées AXA, Crédit Agricole, BNP Paribas et banques privées, sur 24 heures et 7 jours. **7 offres ajoutées, 35 actives au total.**
+- Ajoutées : quatre stages Investment Solutions de Banque Transatlantique (assurance vie, produits structurés, private equity, immobilier), tous à Paris, Bac+4/5, 6 mois dès janvier 2027, publiés ce matin ; deux stages AXA (Group Investment Monitoring Analyst, Credit Analyst) ; un stage « Vie sociale des fonds » chez Cholet Dupont Oudart.
+- BNP Paribas : les offres « Conseiller en gestion de patrimoine » vues sur LinkedIn sont des emplois à temps plein (remplacements, CDI), pas des stages ; les stages BNP de conseiller en gestion de patrimoine ne sont publiés que sur le site du groupe (accès refusé, 403).
+- Crédit Agricole : aucun stage de gestion de patrimoine ou de banque privée publié sur LinkedIn cette semaine ; seuls des stages de banque d'entreprise, de transformation, d'informatique ou d'animation de marché.
+- Exclue : Amethis (stage de fin d'études Bac+5).
+- Les offres affichées dans votre fil LinkedIn personnalisé n'apparaissent pas toutes dans la recherche publique : si une offre vous intéresse et manque, envoyez-moi son lien.
+
+
 ## Dernier passage : 19 octobre 2026
 
 **Résultat : 28 offres actives (21 en liste principale, 7 « Ambitieuses »). L'objectif de 40 n'est pas atteint.**
