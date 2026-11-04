@@ -24,7 +24,11 @@ Recherches LinkedIn ciblées AXA, Crédit Agricole, BNP Paribas et banques priv�
 - Les offres affichées dans votre fil LinkedIn personnalisé n'apparaissent pas toutes dans la recherche publique : si une offre vous intéresse et manque, envoyez-moi son lien.
 
 
-## Dernier passage : 19 octobre 2026
+## Dernier passage : 4 novembre 2026
+
+Revérification des 50 offres : 12 expirées, 38 conservées, 2 ajoutées (MAIF Ingénieur Patrimonial, Patrimovie). 40 offres actives, objectif de 40 atteint de justesse : peu de nouveautés pertinentes depuis le 19 octobre, et la recherche LinkedIn n'a été faite que sur « stage gestion de patrimoine » (limite de débit LinkedIn). Candidates écartées pour niveau : Banque Wormser (M2), UBS et La Française (Bac+5).
+
+## Passage précédent : 19 octobre 2026
 
 **Résultat : 28 offres actives (21 en liste principale, 7 « Ambitieuses »). L'objectif de 40 n'est pas atteint.**
 
