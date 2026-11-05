@@ -1,5 +1,5 @@
 {
-  "derniere_mise_a_jour": "2026-11-04",
+  "derniere_mise_a_jour": "2026-11-05",
   "journal": [
     {
       "date": "2026-10-19",
@@ -46,6 +46,22 @@
         "Lazard Middle Office Gestion Privée (4485315334) non ajoutée : doublon probable de l'offre déjà listée",
         "objectif de 40 offres actives : 40 atteint (38 conservées + 2 nouvelles) ; peu de nouveautés pertinentes publiées depuis le 19 octobre sur les requêtes testées, requêtes LinkedIn CGP/Occitanie et fintechs non épuisées faute de temps"
       ]
+    },
+    {
+      "date": "2026-11-05",
+      "ajoutees": 0,
+      "expirees": 0,
+      "exclues_niveau_m2": 0,
+      "moins_de_7_jours": 2,
+      "sources_inaccessibles": [
+        "rothschildandco.com",
+        "linkedin.com (mur de connexion/429 sur 1 offre)"
+      ],
+      "notes": [
+        "34 offres revérifiées en ligne dans le navigateur intégré ; 5 offres Rothschild non revérifiées (ouverture du site refusée) et 1 offre Caisse d'Epargne BPL (mur de connexion) laissées inchangées.",
+        "Candidates écartées : Wormser Assistant Gérant (M2/fin d'études), La Française Client Portfolio Manager Assistant (Bac+5), Crédit Agricole Ille-et-Vilaine Conseiller Gestion de Patrimoine (4 mois, agence).",
+        "Recherche de nouveautés limitée à WTTJ/LinkedIn (limites de débit) ; aucune nouvelle offre admise ; 40 actives maintenues."
+      ]
     }
   ],
   "offres": [
@@ -75,7 +91,7 @@
       "date_publication": "2026-11-04",
       "date_estimee": true,
       "premiere_detection": "2026-11-04",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -105,7 +121,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -134,7 +150,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -163,7 +179,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -193,7 +209,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": true,
       "type_employeur": "niche"
@@ -223,7 +239,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -252,7 +268,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -281,7 +297,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -311,7 +327,7 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -341,7 +357,7 @@
       "date_publication": "2026-10-14",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -370,7 +386,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -399,7 +415,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -429,7 +445,7 @@
       "date_publication": "2026-11-03",
       "date_estimee": true,
       "premiere_detection": "2026-11-04",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -458,7 +474,7 @@
       "date_publication": "2026-10-12",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -487,7 +503,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -517,7 +533,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -547,7 +563,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -576,7 +592,7 @@
       "date_publication": "2026-10-12",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -606,7 +622,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -635,7 +651,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -694,7 +710,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -724,7 +740,7 @@
       "date_publication": "2026-10-15",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -753,7 +769,7 @@
       "date_publication": "2026-10-14",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -782,7 +798,7 @@
       "date_publication": "2026-10-14",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -811,7 +827,7 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -840,7 +856,7 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -869,7 +885,7 @@
       "date_publication": "2026-10-14",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -898,7 +914,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -957,7 +973,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -986,7 +1002,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1015,7 +1031,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -1074,7 +1090,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -1103,7 +1119,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1132,7 +1148,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
+      "derniere_verification": "2026-11-05",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
