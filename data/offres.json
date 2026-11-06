@@ -1,5 +1,5 @@
 {
-  "derniere_mise_a_jour": "2026-11-05",
+  "derniere_mise_a_jour": "2026-11-06",
   "journal": [
     {
       "date": "2026-10-19",
@@ -62,40 +62,25 @@
         "Candidates écartées : Wormser Assistant Gérant (M2/fin d'études), La Française Client Portfolio Manager Assistant (Bac+5), Crédit Agricole Ille-et-Vilaine Conseiller Gestion de Patrimoine (4 mois, agence).",
         "Recherche de nouveautés limitée à WTTJ/LinkedIn (limites de débit) ; aucune nouvelle offre admise ; 40 actives maintenues."
       ]
+    },
+    {
+      "date": "2026-11-06",
+      "ajoutees": 0,
+      "expirees": 1,
+      "exclues_niveau_m2": 0,
+      "moins_de_7_jours": 1,
+      "sources_inaccessibles": [
+        "linkedin.com (429/mur de connexion après ~10 pages)",
+        "rothschildandco.com (non retenté)"
+      ],
+      "notes": [
+        "9 offres revérifiées en ligne (Banque Transatlantique x3, Natixis WM, ClubFunding, SG Private Banking, AXA x2, Enerfip) ; Patrimovie expirée (candidatures closes).",
+        "LinkedIn a renvoyé 429/authwall dès la 7e page : les ~28 autres offres LinkedIn et les 5 Rothschild n'ont pas été revérifiées et restent inchangées.",
+        "Pas de recherche de nouvelles offres ce jour (limites de débit LinkedIn), aucune nouvelle admise."
+      ]
     }
   ],
   "offres": [
-    {
-      "id": "4e6caf2c9ea5",
-      "titre": "Stage Assistant(e) Conseiller en Gestion de Patrimoine",
-      "entreprise": "Patrimovie",
-      "famille": "cgp",
-      "ambitieuse": false,
-      "ville": "Paris",
-      "region": "Île-de-France",
-      "metier": "patrimoine",
-      "date_debut": "2027-01",
-      "duree": 6,
-      "niveau": "non_precise",
-      "competences": [
-        "relation_patrimoniale",
-        "assurance_vie",
-        "marches"
-      ],
-      "score": 96,
-      "pourquoi": "Cabinet de gestion de patrimoine entrepreneurial (PER, assurance vie, bourse) : vos objectifs commerciaux atteints chez Crédit Agricole et AXA servent directement la prospection patrimoniale.",
-      "vigilance": "Mission centrée sur le démarchage et la téléprospection ; niveau non précisé, vérifier la gratification.",
-      "angle": "Montrer une expérience terrain de relation client patrimoniale et de résultats commerciaux, avec une culture marchés.",
-      "url": "https://www.linkedin.com/jobs/view/4487263831",
-      "type_source": "agregateur",
-      "date_publication": "2026-11-04",
-      "date_estimee": true,
-      "premiere_detection": "2026-11-04",
-      "derniere_verification": "2026-11-05",
-      "statut": "active",
-      "deja_postule": false,
-      "type_employeur": "niche"
-    },
     {
       "id": "db36e311c78d",
       "titre": "Stagiaire Assurance-vie (F/H)",
@@ -121,7 +106,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-05",
+      "derniere_verification": "2026-11-06",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -150,7 +135,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-05",
+      "derniere_verification": "2026-11-06",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -179,7 +164,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-05",
+      "derniere_verification": "2026-11-06",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -209,7 +194,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-05",
+      "derniere_verification": "2026-11-06",
       "statut": "active",
       "deja_postule": true,
       "type_employeur": "niche"
@@ -239,7 +224,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-05",
+      "derniere_verification": "2026-11-06",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -268,7 +253,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-05",
+      "derniere_verification": "2026-11-06",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -357,7 +342,7 @@
       "date_publication": "2026-10-14",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-05",
+      "derniere_verification": "2026-11-06",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -386,7 +371,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-05",
+      "derniere_verification": "2026-11-06",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -415,7 +400,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-05",
+      "derniere_verification": "2026-11-06",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1238,6 +1223,37 @@
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-11-04",
       "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "niche"
+    },
+    {
+      "id": "4e6caf2c9ea5",
+      "titre": "Stage Assistant(e) Conseiller en Gestion de Patrimoine",
+      "entreprise": "Patrimovie",
+      "famille": "cgp",
+      "ambitieuse": false,
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "patrimoine",
+      "date_debut": "2027-01",
+      "duree": 6,
+      "niveau": "non_precise",
+      "competences": [
+        "relation_patrimoniale",
+        "assurance_vie",
+        "marches"
+      ],
+      "score": 96,
+      "pourquoi": "Cabinet de gestion de patrimoine entrepreneurial (PER, assurance vie, bourse) : vos objectifs commerciaux atteints chez Crédit Agricole et AXA servent directement la prospection patrimoniale.",
+      "vigilance": "Mission centrée sur le démarchage et la téléprospection ; niveau non précisé, vérifier la gratification.",
+      "angle": "Montrer une expérience terrain de relation client patrimoniale et de résultats commerciaux, avec une culture marchés.",
+      "url": "https://www.linkedin.com/jobs/view/4487263831",
+      "type_source": "agregateur",
+      "date_publication": "2026-11-04",
+      "date_estimee": true,
+      "premiere_detection": "2026-11-04",
+      "derniere_verification": "2026-11-06",
+      "statut": "expiree",
       "deja_postule": false,
       "type_employeur": "niche"
     },
