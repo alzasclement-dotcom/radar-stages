@@ -1,5 +1,5 @@
 {
-  "derniere_mise_a_jour": "2026-11-08",
+  "derniere_mise_a_jour": "2026-11-11",
   "journal": [
     {
       "date": "2026-10-19",
@@ -108,6 +108,19 @@
         "15 offres revérifiées en ligne (Enerfip, Officium, ClubFunding, VEGA, Natixis x2, Banque Transatlantique x3, SG Private Banking x2, AXA x2, MAIF, Otsar) ; aucune expirée constatée. Les ~21 autres offres LinkedIn et les 5 Rothschild n'ont pas pu être revérifiées (limitation de débit) et restent inchangées.",
         "Nouvelle candidate écartée : Coinhouse/Tilvest assistant sales (Bac+5 affiché). Pas de nouvelle offre admise : recherche LinkedIn impossible (429), une seule recherche WTTJ."
       ]
+    },
+    {
+      "date": "2026-11-11",
+      "ajoutees": 0,
+      "expirees": 0,
+      "exclues_niveau_m2": 0,
+      "moins_de_7_jours": 1,
+      "sources_inaccessibles": [
+        "linkedin.com (HTTP 429 après ~10 pages)"
+      ],
+      "notes": [
+        "9 offres revérifiées en ligne (8 LinkedIn + Enerfip). Les autres offres LinkedIn n'ont pas pu être rouvertes (limite de débit 429) : statut inchangé. Recherche WTJ : Climb back/middle office et BP AURA CGP déjà indisponibles (non ajoutées) ; Ardian IR, Family Ventures non retenues (niveau/hors cible, non ouvertes). Aucune nouvelle offre admise."
+      ]
     }
   ],
   "offres": [
@@ -167,7 +180,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-11",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -197,7 +210,7 @@
       "date_publication": "2026-10-24",
       "date_estimee": true,
       "premiere_detection": "2026-11-07",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-11",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -226,7 +239,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-11",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -255,7 +268,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-11",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -285,7 +298,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-11",
       "statut": "active",
       "deja_postule": true,
       "type_employeur": "niche"
@@ -315,7 +328,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-11",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -344,7 +357,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-11",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -373,7 +386,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-11",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -403,7 +416,7 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-11",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -497,65 +510,6 @@
       "type_employeur": "grand_groupe"
     },
     {
-      "id": "5990d762e13b",
-      "titre": "Stage - Ingénieur Patrimonial F/H",
-      "entreprise": "MAIF Solutions Financières (MAIF)",
-      "famille": "gestion_patrimoniale",
-      "ambitieuse": false,
-      "ville": "Niort",
-      "region": "Nouvelle-Aquitaine",
-      "metier": "patrimoine",
-      "date_debut": "2027-03",
-      "duree": null,
-      "niveau": "non_precise",
-      "competences": [
-        "relation_patrimoniale",
-        "assurance_vie"
-      ],
-      "score": 77,
-      "pourquoi": "Appui à une équipe d'ingénieurs patrimoniaux d'une filiale de conseil en placements financiers et immobiliers : cela rejoint votre M1 Gestion de patrimoine et votre expérience en assurance.",
-      "vigilance": "Début en mars 2027 (après la fenêtre idéale), durée non précisée, poste à Niort ; la page demande un master spécialisé en gestion de patrimoine ou droit.",
-      "angle": "Mettre en avant le M1 Gestion de patrimoine du Cnam et le suivi de documentation produits et de veille réglementaire.",
-      "url": "https://www.linkedin.com/jobs/view/4487025689",
-      "type_source": "agregateur",
-      "date_publication": "2026-11-03",
-      "date_estimee": true,
-      "premiere_detection": "2026-11-04",
-      "derniere_verification": "2026-11-08",
-      "statut": "active",
-      "deja_postule": false,
-      "type_employeur": "niche"
-    },
-    {
-      "id": "ddaedca11c31",
-      "titre": "Stage - Gestionnaire d'Opérations Clientèle - Actif (PERES) H/F",
-      "entreprise": "CACEIS",
-      "famille": "autre",
-      "ambitieuse": false,
-      "ville": "Montrouge",
-      "region": "Île-de-France",
-      "metier": "asset_management",
-      "date_debut": null,
-      "duree": null,
-      "niveau": "bac3_4",
-      "competences": [
-        "marches"
-      ],
-      "score": 74,
-      "pourquoi": "Diligences de tenue de position et instructions de virement pour les fonds de private equity (PERES) : de l'administration de fonds qui complète une culture des fonds non cotés.",
-      "vigilance": "Poste d'opérations très encadré, loin de la distribution et du conseil ; anglais professionnel testé ; début non précisé.",
-      "angle": "Insister sur la rigueur, la connaissance des fonds et l'envie de comprendre le fonctionnement d'une société de gestion.",
-      "url": "https://www.linkedin.com/jobs/view/4400870295",
-      "type_source": "agregateur",
-      "date_publication": "2026-10-12",
-      "date_estimee": true,
-      "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
-      "statut": "active",
-      "deja_postule": false,
-      "type_employeur": "grand_groupe"
-    },
-    {
       "id": "5411a7b173eb",
       "titre": "Stage - Vie Sociale des fonds (H/F)",
       "entreprise": "Cholet Dupont Oudart (Milleis)",
@@ -580,6 +534,36 @@
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-11-07",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "niche"
+    },
+    {
+      "id": "5990d762e13b",
+      "titre": "Stage - Ingénieur Patrimonial F/H",
+      "entreprise": "MAIF Solutions Financières (MAIF)",
+      "famille": "gestion_patrimoniale",
+      "ambitieuse": false,
+      "ville": "Niort",
+      "region": "Nouvelle-Aquitaine",
+      "metier": "patrimoine",
+      "date_debut": "2027-03",
+      "duree": null,
+      "niveau": "non_precise",
+      "competences": [
+        "relation_patrimoniale",
+        "assurance_vie"
+      ],
+      "score": 73,
+      "pourquoi": "Appui à une équipe d'ingénieurs patrimoniaux d'une filiale de conseil en placements financiers et immobiliers : cela rejoint votre M1 Gestion de patrimoine et votre expérience en assurance.",
+      "vigilance": "Début en mars 2027 (après la fenêtre idéale), durée non précisée, poste à Niort ; la page demande un master spécialisé en gestion de patrimoine ou droit.",
+      "angle": "Mettre en avant le M1 Gestion de patrimoine du Cnam et le suivi de documentation produits et de veille réglementaire.",
+      "url": "https://www.linkedin.com/jobs/view/4487025689",
+      "type_source": "agregateur",
+      "date_publication": "2026-11-03",
+      "date_estimee": true,
+      "premiere_detection": "2026-11-04",
+      "derniere_verification": "2026-11-08",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -645,35 +629,6 @@
       "type_employeur": "grand_groupe"
     },
     {
-      "id": "acd1084ee052",
-      "titre": "STAGE - Assistant Chargé d'Affaires en Gestion Privée H/F",
-      "entreprise": "Caisse d'Épargne Côte d'Azur",
-      "famille": "reseau_bancaire",
-      "ambitieuse": false,
-      "ville": "Nice",
-      "region": "Provence-Alpes-Côte d'Azur",
-      "metier": "patrimoine",
-      "date_debut": null,
-      "duree": null,
-      "niveau": "bac4_5",
-      "competences": [
-        "relation_patrimoniale"
-      ],
-      "score": 72,
-      "pourquoi": "Deux stages (Nice et Cannes) pour accompagner les chargés d'affaires en gestion privée dans leurs rendez-vous : de la banque privée de réseau, proche de votre expérience au Crédit Agricole.",
-      "vigilance": "Hors de vos zones préférées (déménagement) ; durée de 4 à 6 mois ; début au premier trimestre 2027.",
-      "angle": "Faire le lien entre l'expérience en réseau d'agences et l'envie de se former à la gestion privée.",
-      "url": "https://www.linkedin.com/jobs/view/4475215755",
-      "type_source": "agregateur",
-      "date_publication": "2026-10-12",
-      "date_estimee": true,
-      "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
-      "statut": "active",
-      "deja_postule": false,
-      "type_employeur": "grand_groupe"
-    },
-    {
       "id": "838b7ebdf0fa",
       "titre": "Stage - 6 mois - Analyste Investissements et Risques H/F",
       "entreprise": "CNP Assurances",
@@ -696,6 +651,35 @@
       "url": "https://www.linkedin.com/jobs/view/4480392396",
       "type_source": "agregateur",
       "date_publication": "2026-10-17",
+      "date_estimee": true,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-11-07",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
+    },
+    {
+      "id": "ddaedca11c31",
+      "titre": "Stage - Gestionnaire d'Opérations Clientèle - Actif (PERES) H/F",
+      "entreprise": "CACEIS",
+      "famille": "autre",
+      "ambitieuse": false,
+      "ville": "Montrouge",
+      "region": "Île-de-France",
+      "metier": "asset_management",
+      "date_debut": null,
+      "duree": null,
+      "niveau": "bac3_4",
+      "competences": [
+        "marches"
+      ],
+      "score": 69,
+      "pourquoi": "Diligences de tenue de position et instructions de virement pour les fonds de private equity (PERES) : de l'administration de fonds qui complète une culture des fonds non cotés.",
+      "vigilance": "Poste d'opérations très encadré, loin de la distribution et du conseil ; anglais professionnel testé ; début non précisé.",
+      "angle": "Insister sur la rigueur, la connaissance des fonds et l'envie de comprendre le fonctionnement d'une société de gestion.",
+      "url": "https://www.linkedin.com/jobs/view/4400870295",
+      "type_source": "agregateur",
+      "date_publication": "2026-10-12",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-11-07",
@@ -784,6 +768,35 @@
       "url": "https://www.linkedin.com/jobs/view/4472939999",
       "type_source": "agregateur",
       "date_publication": "2026-10-05",
+      "date_estimee": true,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-11-07",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
+    },
+    {
+      "id": "acd1084ee052",
+      "titre": "STAGE - Assistant Chargé d'Affaires en Gestion Privée H/F",
+      "entreprise": "Caisse d'Épargne Côte d'Azur",
+      "famille": "reseau_bancaire",
+      "ambitieuse": false,
+      "ville": "Nice",
+      "region": "Provence-Alpes-Côte d'Azur",
+      "metier": "patrimoine",
+      "date_debut": null,
+      "duree": null,
+      "niveau": "bac4_5",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 67,
+      "pourquoi": "Deux stages (Nice et Cannes) pour accompagner les chargés d'affaires en gestion privée dans leurs rendez-vous : de la banque privée de réseau, proche de votre expérience au Crédit Agricole.",
+      "vigilance": "Hors de vos zones préférées (déménagement) ; durée de 4 à 6 mois ; début au premier trimestre 2027.",
+      "angle": "Faire le lien entre l'expérience en réseau d'agences et l'envie de se former à la gestion privée.",
+      "url": "https://www.linkedin.com/jobs/view/4475215755",
+      "type_source": "agregateur",
+      "date_publication": "2026-10-12",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-11-07",
@@ -1334,7 +1347,7 @@
         "assurance_vie",
         "marches"
       ],
-      "score": 96,
+      "score": 92,
       "pourquoi": "Cabinet de gestion de patrimoine entrepreneurial (PER, assurance vie, bourse) : vos objectifs commerciaux atteints chez Crédit Agricole et AXA servent directement la prospection patrimoniale.",
       "vigilance": "Mission centrée sur le démarchage et la téléprospection ; niveau non précisé, vérifier la gratification.",
       "angle": "Montrer une expérience terrain de relation client patrimoniale et de résultats commerciaux, avec une culture marchés.",
@@ -1687,7 +1700,7 @@
       "competences": [
         "relation_patrimoniale"
       ],
-      "score": 51,
+      "score": 46,
       "pourquoi": "Prospection, bilans patrimoniaux et propositions d'investissement pour la banque privée : le métier que vous visez.",
       "vigilance": "Maison à recrutement sélectif ; niveau et durée non précisés.",
       "angle": "Relier l'expérience de banque privée Swiss Life à la rédaction de bilans patrimoniaux.",
