@@ -1,5 +1,5 @@
 {
-  "derniere_mise_a_jour": "2026-11-12",
+  "derniere_mise_a_jour": "2026-11-13",
   "journal": [
     {
       "date": "2026-10-19",
@@ -135,6 +135,23 @@
       "notes": [
         "6 offres LinkedIn revérifiées en ligne ; Officium Asset Management passée expirée (candidatures closes). Autres offres non rouvertes (limite de débit 429), statut inchangé. Aucune nouvelle offre admise : recherche non menée faute de pages ouvrables."
       ]
+    },
+    {
+      "date": "2026-11-13",
+      "ajoutees": 2,
+      "expirees": 2,
+      "exclues_niveau_m2": 0,
+      "moins_de_7_jours": 2,
+      "sources_inaccessibles": [
+        "rothschildandco.com (ouverture refusée dans le navigateur intégré, 6 offres non revérifiées)"
+      ],
+      "notes": [
+        "31 offres LinkedIn et Enerfip (WTTJ) rouvertes et revérifiées ; SG Private Banking Paris et CIC Ouest passées expirées (candidatures closes).",
+        "Nouvelles : Scala Patrimoine, CA Île-de-France Banque des Dirigeants.",
+        "Candidates écartées : Otoktone 3i (Master 2 exigé), CA Ille-et-Vilaine conseiller patrimoine (4 mois, agence), CE Hauts-de-France private equity (banque d'affaires, hors cible), Kays (stage de fin d'études / structurés).",
+        "Rothschild & Co, Lazard et UBS non retenues comme nouveautés (quota d'ambitieuses déjà dépassé).",
+        "Objectif de 40 actives non atteint : recherche limitée à quelques requêtes LinkedIn (plafond de débit)."
+      ]
     }
   ],
   "offres": [
@@ -163,7 +180,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-12",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -193,7 +210,7 @@
       "date_publication": "2026-10-24",
       "date_estimee": true,
       "premiere_detection": "2026-11-07",
-      "derniere_verification": "2026-11-12",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -222,7 +239,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-12",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -251,7 +268,65 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-11",
+      "derniere_verification": "2026-11-13",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "niche"
+    },
+    {
+      "id": "e7a1f04d5077",
+      "titre": "Stage - Conseiller privé adjoint Banque des Dirigeants (H/F)",
+      "entreprise": "Crédit Agricole d'Île-de-France",
+      "famille": "reseau_bancaire",
+      "ambitieuse": false,
+      "ville": "Saint-Denis",
+      "region": "Île-de-France",
+      "metier": "patrimoine",
+      "date_debut": null,
+      "duree": 6,
+      "niveau": "bac4_5",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 86,
+      "pourquoi": "Clientèle haut de gamme et approche patrimoniale globale (juridique, fiscale, financement) dans un réseau que vous connaissez déjà par votre expérience au Crédit Agricole.",
+      "vigilance": "Dates contradictoires sur l'annonce (juillet 2026, janvier 2026 puis janvier 2027) : début à vérifier ; rôle commercial de portefeuille.",
+      "angle": "Insister sur les objectifs commerciaux atteints en agence et la relation patrimoniale en banque privée.",
+      "url": "https://www.linkedin.com/jobs/view/4488396548",
+      "type_source": "agregateur",
+      "date_publication": "2026-11-11",
+      "date_estimee": true,
+      "premiere_detection": "2026-11-13",
+      "derniere_verification": "2026-11-13",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
+    },
+    {
+      "id": "1134fa61d01a",
+      "titre": "Stage Ingénieur(e) patrimonial(e) junior H/F",
+      "entreprise": "Scala Patrimoine",
+      "famille": "cgp",
+      "ambitieuse": false,
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "patrimoine",
+      "date_debut": null,
+      "duree": 6,
+      "niveau": "bac3_4",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 86,
+      "pourquoi": "Multi-family office indépendant rémunéré aux honoraires, en architecture ouverte : colle au projet de conseil patrimonial, et le M1 en gestion de patrimoine du Cnam est explicitement accepté.",
+      "vigilance": "Début annoncé seulement « début 2027 » (à vérifier) ; poste très orienté droit et fiscalité du patrimoine, avec une première expérience en family office ou étude appréciée.",
+      "angle": "Valoriser le M1 gestion de patrimoine, l'expérience en banque privée Swiss Life et l'aisance Excel pour les simulations.",
+      "url": "https://www.linkedin.com/jobs/view/4490315766",
+      "type_source": "agregateur",
+      "date_publication": "2026-11-12",
+      "date_estimee": true,
+      "premiere_detection": "2026-11-13",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -281,7 +356,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-11",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": true,
       "type_employeur": "niche"
@@ -311,7 +386,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-12",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -340,7 +415,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-12",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -369,40 +444,10 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-12",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
-    },
-    {
-      "id": "5566f8dbeea1",
-      "titre": "Stage Banquier Privé",
-      "entreprise": "Société Générale Private Banking",
-      "famille": "reseau_bancaire",
-      "ambitieuse": false,
-      "ville": "Paris",
-      "region": "Île-de-France",
-      "metier": "patrimoine",
-      "date_debut": null,
-      "duree": null,
-      "niveau": "non_precise",
-      "competences": [
-        "relation_patrimoniale",
-        "marches"
-      ],
-      "score": 79,
-      "pourquoi": "Aide à la rédaction de propositions d'investissement et d'allocations d'actifs et préparation des rendez-vous d'un banquier privé : de la banque privée de réseau où votre relation client patrimoniale compte.",
-      "vigilance": "Niveau, date de début et durée non précisés dans l'annonce.",
-      "angle": "Mettre en avant la relation client patrimoniale et la rigueur dans la préparation des dossiers.",
-      "url": "https://www.linkedin.com/jobs/view/4476433053",
-      "type_source": "agregateur",
-      "date_publication": "2026-10-14",
-      "date_estimee": true,
-      "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-08",
-      "statut": "active",
-      "deja_postule": false,
-      "type_employeur": "grand_groupe"
     },
     {
       "id": "163644c1d34a",
@@ -428,7 +473,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -457,7 +502,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -486,7 +531,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -516,7 +561,7 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-11",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -546,7 +591,7 @@
       "date_publication": "2026-11-03",
       "date_estimee": true,
       "premiere_detection": "2026-11-04",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -576,7 +621,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-08",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -606,7 +651,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -636,7 +681,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -665,7 +710,7 @@
       "date_publication": "2026-10-12",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -694,7 +739,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -723,7 +768,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -753,7 +798,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -782,7 +827,7 @@
       "date_publication": "2026-10-12",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -812,94 +857,7 @@
       "date_publication": "2026-10-15",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
-      "statut": "active",
-      "deja_postule": false,
-      "type_employeur": "grand_groupe"
-    },
-    {
-      "id": "6dd873fa016b",
-      "titre": "Stagiaire Attaché(e) de Clientèle Entreprise (H/F)",
-      "entreprise": "CIC Ouest",
-      "famille": "reseau_bancaire",
-      "ambitieuse": false,
-      "ville": "Chartres",
-      "region": "Centre-Val de Loire",
-      "metier": "banque_finance",
-      "date_debut": null,
-      "duree": null,
-      "niveau": "bac3_4",
-      "competences": [
-        "relation_patrimoniale"
-      ],
-      "score": 60,
-      "pourquoi": "Appui à un attaché de clientèle entreprise, ouvert aux Masters banque-finance comme aux licences économie-gestion.",
-      "vigilance": "Chartres, hors de vos zones préférées ; début et durée non précisés.",
-      "angle": "Mettre en avant l'expérience d'agence et le goût de la relation client.",
-      "url": "https://www.linkedin.com/jobs/view/4374045292",
-      "type_source": "agregateur",
-      "date_publication": "2026-10-14",
-      "date_estimee": true,
-      "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
-      "statut": "active",
-      "deja_postule": false,
-      "type_employeur": "grand_groupe"
-    },
-    {
-      "id": "90473a626e98",
-      "titre": "Stage - Gestionnaire/Analyste Crédits H/F",
-      "entreprise": "Caisse d'Épargne Grand Est Europe",
-      "famille": "reseau_bancaire",
-      "ambitieuse": false,
-      "ville": "Nancy",
-      "region": "Grand Est",
-      "metier": "banque_finance",
-      "date_debut": null,
-      "duree": null,
-      "niveau": "bac3_4",
-      "competences": [
-        "excel_vba_python"
-      ],
-      "score": 60,
-      "pourquoi": "Traitement et analyse de dossiers de crédit à la direction crédits et engagements, ouvert aux Master 1 ou 2 en finance : de l'analyse financière où Excel compte.",
-      "vigilance": "Hors de vos zones préférées (Nancy) ; début et durée non précisés ; gratification autour de 1 000 euros.",
-      "angle": "Mettre en avant la modélisation financière et la rigueur d'analyse de dossiers.",
-      "url": "https://www.linkedin.com/jobs/view/4468952073",
-      "type_source": "agregateur",
-      "date_publication": "2026-10-14",
-      "date_estimee": true,
-      "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
-      "statut": "active",
-      "deja_postule": false,
-      "type_employeur": "grand_groupe"
-    },
-    {
-      "id": "31b1d19ab3b4",
-      "titre": "STAGE - Chargé d'Affaires Entreprises Adjoint - Strasbourg H/F",
-      "entreprise": "LCL",
-      "famille": "reseau_bancaire",
-      "ambitieuse": false,
-      "ville": "Strasbourg",
-      "region": "Grand Est",
-      "metier": "banque_finance",
-      "date_debut": null,
-      "duree": null,
-      "niveau": "non_precise",
-      "competences": [
-        "relation_patrimoniale"
-      ],
-      "score": 60,
-      "pourquoi": "Rôle d'adjoint à un chargé d'affaires entreprises dans un réseau de banque de détail du groupe Crédit Agricole, avec perspective d'embauche en fin d'études.",
-      "vigilance": "Banque d'entreprise ; Strasbourg, hors de vos zones préférées ; niveau, début et durée non précisés.",
-      "angle": "Relier l'expérience au Crédit Agricole à la connaissance du groupe et du réseau LCL.",
-      "url": "https://www.linkedin.com/jobs/view/4479012001",
-      "type_source": "agregateur",
-      "date_publication": "2026-10-14",
-      "date_estimee": true,
-      "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -928,7 +886,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -987,7 +945,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1016,7 +974,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1045,7 +1003,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -1080,6 +1038,35 @@
       "type_employeur": "niche"
     },
     {
+      "id": "90473a626e98",
+      "titre": "Stage - Gestionnaire/Analyste Crédits H/F",
+      "entreprise": "Caisse d'Épargne Grand Est Europe",
+      "famille": "reseau_bancaire",
+      "ambitieuse": false,
+      "ville": "Nancy",
+      "region": "Grand Est",
+      "metier": "banque_finance",
+      "date_debut": null,
+      "duree": null,
+      "niveau": "bac3_4",
+      "competences": [
+        "excel_vba_python"
+      ],
+      "score": 55,
+      "pourquoi": "Traitement et analyse de dossiers de crédit à la direction crédits et engagements, ouvert aux Master 1 ou 2 en finance : de l'analyse financière où Excel compte.",
+      "vigilance": "Hors de vos zones préférées (Nancy) ; début et durée non précisés ; gratification autour de 1 000 euros.",
+      "angle": "Mettre en avant la modélisation financière et la rigueur d'analyse de dossiers.",
+      "url": "https://www.linkedin.com/jobs/view/4468952073",
+      "type_source": "agregateur",
+      "date_publication": "2026-10-14",
+      "date_estimee": true,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-11-13",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
+    },
+    {
       "id": "c504a8360630",
       "titre": "STAGE - Chargé d'Affaires Entreprises Adjoint - Dijon H/F",
       "entreprise": "LCL",
@@ -1103,7 +1090,7 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1132,7 +1119,36 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
+    },
+    {
+      "id": "31b1d19ab3b4",
+      "titre": "STAGE - Chargé d'Affaires Entreprises Adjoint - Strasbourg H/F",
+      "entreprise": "LCL",
+      "famille": "reseau_bancaire",
+      "ambitieuse": false,
+      "ville": "Strasbourg",
+      "region": "Grand Est",
+      "metier": "banque_finance",
+      "date_debut": null,
+      "duree": null,
+      "niveau": "non_precise",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 55,
+      "pourquoi": "Rôle d'adjoint à un chargé d'affaires entreprises dans un réseau de banque de détail du groupe Crédit Agricole, avec perspective d'embauche en fin d'études.",
+      "vigilance": "Banque d'entreprise ; Strasbourg, hors de vos zones préférées ; niveau, début et durée non précisés.",
+      "angle": "Relier l'expérience au Crédit Agricole à la connaissance du groupe et du réseau LCL.",
+      "url": "https://www.linkedin.com/jobs/view/4479012001",
+      "type_source": "agregateur",
+      "date_publication": "2026-10-14",
+      "date_estimee": true,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1162,7 +1178,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -1191,7 +1207,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1220,7 +1236,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-07",
+      "derniere_verification": "2026-11-13",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -1330,7 +1346,7 @@
         "relation_patrimoniale",
         "marches"
       ],
-      "score": 96,
+      "score": 92,
       "pourquoi": "Support aux gérants privés et family officers, reportings mensuels et outils clients : colle à l'expérience en banque privée et à la modélisation sous Excel/VBA, dans une structure indépendante en architecture ouverte.",
       "vigilance": "L'annonce vise surtout les grandes écoles de commerce ou équivalents universitaires en droit/finance ; convention obligatoire, niveau précis non indiqué.",
       "angle": "Valoriser l'expérience en banque privée Swiss Life et l'automatisation de reportings pour un family office de taille humaine.",
@@ -1584,6 +1600,36 @@
       "type_employeur": "niche"
     },
     {
+      "id": "5566f8dbeea1",
+      "titre": "Stage Banquier Privé",
+      "entreprise": "Société Générale Private Banking",
+      "famille": "reseau_bancaire",
+      "ambitieuse": false,
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "patrimoine",
+      "date_debut": null,
+      "duree": null,
+      "niveau": "non_precise",
+      "competences": [
+        "relation_patrimoniale",
+        "marches"
+      ],
+      "score": 74,
+      "pourquoi": "Aide à la rédaction de propositions d'investissement et d'allocations d'actifs et préparation des rendez-vous d'un banquier privé : de la banque privée de réseau où votre relation client patrimoniale compte.",
+      "vigilance": "Niveau, date de début et durée non précisés dans l'annonce.",
+      "angle": "Mettre en avant la relation client patrimoniale et la rigueur dans la préparation des dossiers.",
+      "url": "https://www.linkedin.com/jobs/view/4476433053",
+      "type_source": "agregateur",
+      "date_publication": "2026-10-14",
+      "date_estimee": true,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-11-13",
+      "statut": "expiree",
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
+    },
+    {
       "id": "1ab188d697dd",
       "titre": "Stage - Conseiller en investissements H/F",
       "entreprise": "MIRARI Wealth Management",
@@ -1695,6 +1741,35 @@
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-11-04",
+      "statut": "expiree",
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
+    },
+    {
+      "id": "6dd873fa016b",
+      "titre": "Stagiaire Attaché(e) de Clientèle Entreprise (H/F)",
+      "entreprise": "CIC Ouest",
+      "famille": "reseau_bancaire",
+      "ambitieuse": false,
+      "ville": "Chartres",
+      "region": "Centre-Val de Loire",
+      "metier": "banque_finance",
+      "date_debut": null,
+      "duree": null,
+      "niveau": "bac3_4",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 55,
+      "pourquoi": "Appui à un attaché de clientèle entreprise, ouvert aux Masters banque-finance comme aux licences économie-gestion.",
+      "vigilance": "Chartres, hors de vos zones préférées ; début et durée non précisés.",
+      "angle": "Mettre en avant l'expérience d'agence et le goût de la relation client.",
+      "url": "https://www.linkedin.com/jobs/view/4374045292",
+      "type_source": "agregateur",
+      "date_publication": "2026-10-14",
+      "date_estimee": true,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-11-13",
       "statut": "expiree",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
