@@ -1,5 +1,5 @@
 {
-  "derniere_mise_a_jour": "2026-11-13",
+  "derniere_mise_a_jour": "2026-11-14",
   "journal": [
     {
       "date": "2026-10-19",
@@ -152,9 +152,54 @@
         "Rothschild & Co, Lazard et UBS non retenues comme nouveautés (quota d'ambitieuses déjà dépassé).",
         "Objectif de 40 actives non atteint : recherche limitée à quelques requêtes LinkedIn (plafond de débit)."
       ]
+    },
+    {
+      "date": "2026-11-14",
+      "ajoutees": 4,
+      "expirees": 0,
+      "exclues_niveau_m2": 0,
+      "moins_de_7_jours": 6,
+      "sources_inaccessibles": [
+        "rothschildandco.com (ouverture refusée dans le navigateur intégré, 6 offres non revérifiées)"
+      ],
+      "notes": [
+        "35 offres LinkedIn et Enerfip (WTTJ) rouvertes : toutes encore en ligne.",
+        "Nouvelles : 2 stages assistant banquier privé Caisse d'Epargne Ile-de-France, Candriam CPM Alternative, CNCGP.",
+        "Candidates écartées : Sienna Client Account Manager (Bac+5 exigé), stages fin d'études L&A Finance, Rothschild Family Office (juillet 2027), produits structurés HSBC, CIC Sud Ouest (annonce vide, non vérifiable).",
+        "Objectif de 40 actives atteint ; une seule requête LinkedIn de recherche faite à ce passage (gestion de patrimoine, 7 jours)."
+      ]
     }
   ],
   "offres": [
+    {
+      "id": "99c74717a78a",
+      "titre": "Stage - Assistant banquier privé H/F (Boulogne-Billancourt)",
+      "entreprise": "Caisse d'Epargne Ile-de-France",
+      "famille": "reseau_bancaire",
+      "ambitieuse": false,
+      "ville": "Boulogne-Billancourt",
+      "region": "Île-de-France",
+      "metier": "patrimoine",
+      "date_debut": "2027-01",
+      "duree": 6,
+      "niveau": "bac4_5",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 94,
+      "pourquoi": "Diagnostics patrimoniaux et préparation des rendez-vous en centre de banque privée, ce qui prolonge l'expérience en banque privée Swiss Life et le M1 gestion de patrimoine.",
+      "vigilance": "Annonce rédigée pour un Bac+4/5 (master banque ou gestion de patrimoine préféré) : le M1 doit être mis en avant ; produits maison plutôt qu'architecture ouverte.",
+      "angle": "Montrer le M1 gestion de patrimoine du Cnam et l'habitude de la relation client patrimoniale acquise en agence et en banque privée.",
+      "url": "https://www.linkedin.com/jobs/view/4487183681",
+      "type_source": "agregateur",
+      "date_publication": "2026-11-10",
+      "date_estimee": true,
+      "premiere_detection": "2026-11-14",
+      "derniere_verification": "2026-11-14",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
+    },
     {
       "id": "db36e311c78d",
       "titre": "Stagiaire Assurance-vie (F/H)",
@@ -180,7 +225,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -210,7 +255,7 @@
       "date_publication": "2026-10-24",
       "date_estimee": true,
       "premiere_detection": "2026-11-07",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -239,7 +284,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -268,10 +313,68 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
+    },
+    {
+      "id": "efdcf3a99ad9",
+      "titre": "Stagiaire (cabinet de conseil en gestion de patrimoine)",
+      "entreprise": "CNCGP - Chambre Nationale des Conseils en Gestion de Patrimoine",
+      "famille": "cgp",
+      "ambitieuse": false,
+      "ville": "Saint-Germain-en-Laye",
+      "region": "Île-de-France",
+      "metier": "patrimoine",
+      "date_debut": null,
+      "duree": null,
+      "niveau": "non_precise",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 86,
+      "pourquoi": "Études, veille patrimoniale et supports clients pour un étudiant de master 1 ou 2 en gestion de patrimoine, ce qui correspond au M1 du Cnam.",
+      "vigilance": "Structure et missions peu détaillées, date et durée absentes, rémunération non précisée (à vérifier).",
+      "angle": "Insister sur le M1 gestion de patrimoine et la capacité à produire des supports clients.",
+      "url": "https://www.linkedin.com/jobs/view/4487434720",
+      "type_source": "agregateur",
+      "date_publication": "2026-11-10",
+      "date_estimee": true,
+      "premiere_detection": "2026-11-14",
+      "derniere_verification": "2026-11-14",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "niche"
+    },
+    {
+      "id": "894bafb31efc",
+      "titre": "Stage - Assistant banquier privé H/F (Nogent-sur-Marne)",
+      "entreprise": "Caisse d'Epargne Ile-de-France",
+      "famille": "reseau_bancaire",
+      "ambitieuse": false,
+      "ville": "Nogent-sur-Marne",
+      "region": "Île-de-France",
+      "metier": "patrimoine",
+      "date_debut": null,
+      "duree": null,
+      "niveau": "non_precise",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 86,
+      "pourquoi": "Assistant en centre de banque privée pour un étudiant de master, cohérent avec le M1 gestion de patrimoine et l'expérience Swiss Life.",
+      "vigilance": "Date de début et durée à vérifier, non lisibles sur l'annonce ; produits maison de la banque.",
+      "angle": "Mettre en avant les objectifs commerciaux atteints et la pratique de la relation patrimoniale.",
+      "url": "https://www.linkedin.com/jobs/view/4487180713",
+      "type_source": "agregateur",
+      "date_publication": "2026-11-10",
+      "date_estimee": true,
+      "premiere_detection": "2026-11-14",
+      "derniere_verification": "2026-11-14",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "e7a1f04d5077",
@@ -297,7 +400,7 @@
       "date_publication": "2026-11-11",
       "date_estimee": true,
       "premiere_detection": "2026-11-13",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -326,7 +429,7 @@
       "date_publication": "2026-11-12",
       "date_estimee": true,
       "premiere_detection": "2026-11-13",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -356,7 +459,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": true,
       "type_employeur": "niche"
@@ -386,7 +489,37 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "niche"
+    },
+    {
+      "id": "97a2e7de786a",
+      "titre": "Client Portfolio Manager Alternative Intern F/M",
+      "entreprise": "Candriam",
+      "famille": "autre",
+      "ambitieuse": false,
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "asset_management",
+      "date_debut": null,
+      "duree": 6,
+      "niveau": "bac3_4",
+      "competences": [
+        "excel_vba_python",
+        "marches"
+      ],
+      "score": 83,
+      "pourquoi": "Support commercial des fonds alternatifs auprès des équipes de vente, proche du rôle distribution de fonds de l'offre étalon, avec Excel et Python appréciés.",
+      "vigilance": "Niveau demandé : Bac+4 minimum (Master I), anglais courant, Bloomberg attendu, début non précisé (à vérifier) ; univers hedge funds assez technique.",
+      "angle": "Valoriser le M1, la modélisation Excel/VBA/Python et la culture marchés.",
+      "url": "https://www.linkedin.com/jobs/view/4489463235",
+      "type_source": "agregateur",
+      "date_publication": "2026-11-10",
+      "date_estimee": true,
+      "premiere_detection": "2026-11-14",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -415,7 +548,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -444,7 +577,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -473,7 +606,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -502,7 +635,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -531,7 +664,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -561,7 +694,7 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -591,7 +724,7 @@
       "date_publication": "2026-11-03",
       "date_estimee": true,
       "premiere_detection": "2026-11-04",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -621,7 +754,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -651,7 +784,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -681,7 +814,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -710,7 +843,7 @@
       "date_publication": "2026-10-12",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -739,7 +872,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -768,7 +901,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -798,7 +931,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -827,7 +960,7 @@
       "date_publication": "2026-10-12",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -848,7 +981,7 @@
         "excel_vba_python",
         "marches"
       ],
-      "score": 65,
+      "score": 60,
       "pourquoi": "Analyse financière et modélisation (Excel avancé) au siège de Nantes, pour un Master 1 ou 2 ou une école de commerce : un poste d'investissement qui sollicite vos compétences de modélisation.",
       "vigilance": "Début à compter de mars 2027, hors de la fenêtre habituelle ; Nantes, hors de vos zones préférées.",
       "angle": "Mettre en avant Excel/VBA/Python et la culture des marchés.",
@@ -857,7 +990,7 @@
       "date_publication": "2026-10-15",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -886,7 +1019,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -945,7 +1078,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -974,7 +1107,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1003,7 +1136,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -1061,7 +1194,7 @@
       "date_publication": "2026-10-14",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1090,7 +1223,7 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1119,7 +1252,7 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1148,7 +1281,7 @@
       "date_publication": "2026-10-14",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1178,7 +1311,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -1207,7 +1340,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1236,7 +1369,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-13",
+      "derniere_verification": "2026-11-14",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -1512,6 +1645,37 @@
       "type_employeur": "niche"
     },
     {
+      "id": "21835441ba42",
+      "titre": "Stage - Assistant gérant de portefeuille (H/F)",
+      "entreprise": "Milleis Banque Privée",
+      "famille": "gestion_patrimoniale",
+      "ambitieuse": false,
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "allocation",
+      "date_debut": null,
+      "duree": null,
+      "niveau": "non_precise",
+      "competences": [
+        "excel_vba_python",
+        "marches",
+        "assurance_vie"
+      ],
+      "score": 78,
+      "pourquoi": "Rapports de gestion, reportings de gestion pilotée en assurance vie et aide aux gérants sur les mandats : de l'allocation concrète où Excel et la culture marchés comptent.",
+      "vigilance": "Niveau, date de début et durée non précisés ; annonce publiée il y a environ trois semaines, donc à reconfirmer.",
+      "angle": "Relier l'automatisation de reportings en VBA et Python à la production de rapports de gestion trimestriels.",
+      "url": "https://www.linkedin.com/jobs/view/4471417584",
+      "type_source": "agregateur",
+      "date_publication": "2026-09-28",
+      "date_estimee": true,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-11-04",
+      "statut": "expiree",
+      "deja_postule": false,
+      "type_employeur": "niche"
+    },
+    {
       "id": "3d394178d21c",
       "titre": "Investor Relations & Business Development (Internship)",
       "entreprise": "Founders Future",
@@ -1524,7 +1688,7 @@
       "duree": null,
       "niveau": "bac3_4",
       "competences": [],
-      "score": 79,
+      "score": 74,
       "pourquoi": "Préparation de documents de levée de fonds et animation d'une base d'investisseurs (CRM, data room) : une porte d'entrée vers les relations investisseurs, ouverte aux M1.",
       "vigilance": "Fonds de capital-risque, hors produits grand public ; début et durée non précisés.",
       "angle": "Mettre en avant le sérieux, le goût pour la relation investisseurs et la maîtrise des outils de reporting.",
@@ -1554,44 +1718,13 @@
         "excel_vba_python",
         "marches"
       ],
-      "score": 79,
+      "score": 74,
       "pourquoi": "Propositions d'investissement, allocation d'actifs, modèles Excel de suivi de portefeuilles et usage de Bloomberg : un travail d'allocation concret avec vos outils habituels.",
       "vigilance": "Nice, hors de vos zones préférées ; niveau et durée non précisés.",
       "angle": "Mettre en avant les modèles Excel et Python et l'intérêt pour les comités d'investissement.",
       "url": "https://www.linkedin.com/jobs/view/4479288805",
       "type_source": "agregateur",
       "date_publication": "2026-10-15",
-      "date_estimee": true,
-      "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
-      "statut": "expiree",
-      "deja_postule": false,
-      "type_employeur": "niche"
-    },
-    {
-      "id": "21835441ba42",
-      "titre": "Stage - Assistant gérant de portefeuille (H/F)",
-      "entreprise": "Milleis Banque Privée",
-      "famille": "gestion_patrimoniale",
-      "ambitieuse": false,
-      "ville": "Paris",
-      "region": "Île-de-France",
-      "metier": "allocation",
-      "date_debut": null,
-      "duree": null,
-      "niveau": "non_precise",
-      "competences": [
-        "excel_vba_python",
-        "marches",
-        "assurance_vie"
-      ],
-      "score": 78,
-      "pourquoi": "Rapports de gestion, reportings de gestion pilotée en assurance vie et aide aux gérants sur les mandats : de l'allocation concrète où Excel et la culture marchés comptent.",
-      "vigilance": "Niveau, date de début et durée non précisés ; annonce publiée il y a environ trois semaines, donc à reconfirmer.",
-      "angle": "Relier l'automatisation de reportings en VBA et Python à la production de rapports de gestion trimestriels.",
-      "url": "https://www.linkedin.com/jobs/view/4471417584",
-      "type_source": "agregateur",
-      "date_publication": "2026-09-28",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-11-04",
@@ -1688,35 +1821,6 @@
       "type_employeur": "niche"
     },
     {
-      "id": "24ec6f276cc1",
-      "titre": "Stage - Assistant Chargé d'Affaires Entreprises F/H",
-      "entreprise": "La Banque Postale (La Poste Groupe)",
-      "famille": "reseau_bancaire",
-      "ambitieuse": false,
-      "ville": "Lille",
-      "region": "Hauts-de-France",
-      "metier": "banque_finance",
-      "date_debut": null,
-      "duree": 6,
-      "niveau": "bac3_4",
-      "competences": [
-        "relation_patrimoniale"
-      ],
-      "score": 60,
-      "pourquoi": "Soutien à un chargé d'affaires entreprises, stage de 6 mois ouvert dès Bac+4 à La Banque Postale.",
-      "vigilance": "Banque d'entreprise ; Lille, hors de vos zones préférées ; début non précisé.",
-      "angle": "Relier l'expérience en réseau d'agences à la relation avec une clientèle entreprise.",
-      "url": "https://www.linkedin.com/jobs/view/4479544895",
-      "type_source": "agregateur",
-      "date_publication": "2026-10-15",
-      "date_estimee": true,
-      "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-04",
-      "statut": "expiree",
-      "deja_postule": false,
-      "type_employeur": "grand_groupe"
-    },
-    {
       "id": "abb62d06bdb2",
       "titre": "Stage - Assistant Chargé d'Affaires F/H",
       "entreprise": "La Banque Postale (La Poste Groupe)",
@@ -1770,6 +1874,35 @@
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-11-13",
+      "statut": "expiree",
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
+    },
+    {
+      "id": "24ec6f276cc1",
+      "titre": "Stage - Assistant Chargé d'Affaires Entreprises F/H",
+      "entreprise": "La Banque Postale (La Poste Groupe)",
+      "famille": "reseau_bancaire",
+      "ambitieuse": false,
+      "ville": "Lille",
+      "region": "Hauts-de-France",
+      "metier": "banque_finance",
+      "date_debut": null,
+      "duree": 6,
+      "niveau": "bac3_4",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 55,
+      "pourquoi": "Soutien à un chargé d'affaires entreprises, stage de 6 mois ouvert dès Bac+4 à La Banque Postale.",
+      "vigilance": "Banque d'entreprise ; Lille, hors de vos zones préférées ; début non précisé.",
+      "angle": "Relier l'expérience en réseau d'agences à la relation avec une clientèle entreprise.",
+      "url": "https://www.linkedin.com/jobs/view/4479544895",
+      "type_source": "agregateur",
+      "date_publication": "2026-10-15",
+      "date_estimee": true,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-11-04",
       "statut": "expiree",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
