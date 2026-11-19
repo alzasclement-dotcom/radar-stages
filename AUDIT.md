@@ -24,7 +24,11 @@ Recherches LinkedIn ciblées AXA, Crédit Agricole, BNP Paribas et banques priv�
 - Les offres affichées dans votre fil LinkedIn personnalisé n'apparaissent pas toutes dans la recherche publique : si une offre vous intéresse et manque, envoyez-moi son lien.
 
 
-## Dernier passage : 18 novembre 2026
+## Dernier passage : 19 novembre 2026
+
+Revérification de 33 offres LinkedIn dans le navigateur intégré : 1 expirée (CE Bretagne Pays de Loire analyste investissements, « candidatures plus acceptées »), 1 supprimée pour niveau (ClubFunding Portfolio Management Intern, Bac+5 fin d'études), 0 ajoutée. **36 actives : objectif de 40 non atteint.** Raison : une seule recherche LinkedIn (gestion de patrimoine, 7 jours) faite avant un mur de connexion ; les nouvelles candidates ont été écartées (Groupe Premium : Bac+5 fin d'études ; Heritage Holdings : master exigé ; SG Private Banking Paris : doublon du validateur ; BNP PAM et La France Mutualiste non lues en entier). Offres non revérifiées : 6 Rothschild & Co (site refusé dans le navigateur intégré).
+
+## Passage du 18 novembre 2026
 
 Revérification de 45 offres : 9 expirées (Banque Transatlantique x3, AXA Credit Analyst, Cholet Dupont Oudart, CNP, CE Grand Est, CE Bretagne Pays de Loire chargé d'affaires, Enerfip, dont la page indique « ce job n'est plus disponible »), 2 ajoutées (CA Alpes Provence assistant banquier privé, Camerone Capital). **38 actives : objectif de 40 non atteint.** Raison : forte vague d'expirations et une seule recherche LinkedIn (gestion de patrimoine, 7 jours) faite ; ClubFunding relations investisseurs, Wormser et Sienna écartés (M2 ou Bac+5). Offres non revérifiées : 6 Rothschild & Co (site refusé) et 4 LinkedIn (mur de connexion).
 

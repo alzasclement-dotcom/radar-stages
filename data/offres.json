@@ -1,5 +1,5 @@
 {
-  "derniere_mise_a_jour": "2026-11-18",
+  "derniere_mise_a_jour": "2026-11-19",
   "journal": [
     {
       "date": "2026-10-19",
@@ -218,6 +218,24 @@
         "Écartées (M2, Bac+5 ou fin d'études) : ClubFunding chargé des relations investisseurs, Banque Wormser Frères assistant gérant, Sienna Investment Managers client account manager. Écartées hors cible : Joconde asset manager (immobilier direct), Rothschild Family Office (début juillet 2027), doublons CA Alpes Provence (Avignon, Aix, une seule gardée).",
         "Une seule recherche LinkedIn (gestion de patrimoine, 7 jours) parcourue ; les autres requêtes n'ont pas été faites faute de temps. Offres LinkedIn lues au titre et au bandeau de fermeture, niveau non réévalué page par page."
       ]
+    },
+    {
+      "date": "2026-11-19",
+      "ajoutees": 0,
+      "expirees": 1,
+      "exclues_niveau_m2": 1,
+      "moins_de_7_jours": 3,
+      "sources_inaccessibles": [
+        "rothschildandco.com (ouverture refusée dans le navigateur intégré, 6 offres non revérifiées, statut inchangé)",
+        "linkedin.com (mur de connexion sur une offre La France Mutualiste ; recherche interrompue après 1 requête)"
+      ],
+      "notes": [
+        "Expirée : Caisse d'Epargne Bretagne Pays de Loire analyste investissements (candidatures plus acceptées).",
+        "Exclue pour niveau et supprimée : ClubFunding Portfolio Management Intern (Bac+5, stage de fin d'études).",
+        "Candidate écartée comme doublon par le validateur : Société Générale Private Banking, stage banquier privé à Paris (même entreprise et même titre que des offres déjà listées).",
+        "Écartées : Groupe Premium conseil en gestion d'actifs (Bac+5 fin d'études), Heritage Holdings (master exigé), BNP PAM real estate fund management et La France Mutualiste analyste capital investissement (page non lue en entier / authwall).",
+        "Une seule recherche LinkedIn faite (gestion de patrimoine, 7 jours) ; les autres requêtes n'ont pas été lancées. 31 offres LinkedIn revérifiées en ligne dans le navigateur intégré."
+      ]
     }
   ],
   "offres": [
@@ -245,7 +263,7 @@
       "date_publication": "2026-11-10",
       "date_estimee": true,
       "premiere_detection": "2026-11-14",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -275,7 +293,7 @@
       "date_publication": "2026-11-18",
       "date_estimee": false,
       "premiere_detection": "2026-11-18",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -305,7 +323,7 @@
       "date_publication": "2026-10-24",
       "date_estimee": true,
       "premiere_detection": "2026-11-07",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -335,36 +353,7 @@
       "date_publication": "2026-11-17",
       "date_estimee": false,
       "premiere_detection": "2026-11-17",
-      "derniere_verification": "2026-11-18",
-      "statut": "active",
-      "deja_postule": false,
-      "type_employeur": "niche"
-    },
-    {
-      "id": "1134fa61d01a",
-      "titre": "Stage Ingénieur(e) patrimonial(e) junior H/F",
-      "entreprise": "Scala Patrimoine",
-      "famille": "cgp",
-      "ambitieuse": false,
-      "ville": "Paris",
-      "region": "Île-de-France",
-      "metier": "patrimoine",
-      "date_debut": null,
-      "duree": 6,
-      "niveau": "bac3_4",
-      "competences": [
-        "relation_patrimoniale"
-      ],
-      "score": 86,
-      "pourquoi": "Multi-family office indépendant rémunéré aux honoraires, en architecture ouverte : colle au projet de conseil patrimonial, et le M1 en gestion de patrimoine du Cnam est explicitement accepté.",
-      "vigilance": "Début annoncé seulement « début 2027 » (à vérifier) ; poste très orienté droit et fiscalité du patrimoine, avec une première expérience en family office ou étude appréciée.",
-      "angle": "Valoriser le M1 gestion de patrimoine, l'expérience en banque privée Swiss Life et l'aisance Excel pour les simulations.",
-      "url": "https://www.linkedin.com/jobs/view/4490315766",
-      "type_source": "agregateur",
-      "date_publication": "2026-11-12",
-      "date_estimee": true,
-      "premiere_detection": "2026-11-13",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -394,7 +383,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -423,7 +412,7 @@
       "date_publication": "2026-11-10",
       "date_estimee": true,
       "premiere_detection": "2026-11-14",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -452,7 +441,7 @@
       "date_publication": "2026-11-10",
       "date_estimee": true,
       "premiere_detection": "2026-11-14",
-      "derniere_verification": "2026-11-17",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -481,10 +470,39 @@
       "date_publication": "2026-11-11",
       "date_estimee": true,
       "premiere_detection": "2026-11-13",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
+    },
+    {
+      "id": "1134fa61d01a",
+      "titre": "Stage Ingénieur(e) patrimonial(e) junior H/F",
+      "entreprise": "Scala Patrimoine",
+      "famille": "cgp",
+      "ambitieuse": false,
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "patrimoine",
+      "date_debut": null,
+      "duree": 6,
+      "niveau": "bac3_4",
+      "competences": [
+        "relation_patrimoniale"
+      ],
+      "score": 82,
+      "pourquoi": "Multi-family office indépendant rémunéré aux honoraires, en architecture ouverte : colle au projet de conseil patrimonial, et le M1 en gestion de patrimoine du Cnam est explicitement accepté.",
+      "vigilance": "Début annoncé seulement « début 2027 » (à vérifier) ; poste très orienté droit et fiscalité du patrimoine, avec une première expérience en family office ou étude appréciée.",
+      "angle": "Valoriser le M1 gestion de patrimoine, l'expérience en banque privée Swiss Life et l'aisance Excel pour les simulations.",
+      "url": "https://www.linkedin.com/jobs/view/4490315766",
+      "type_source": "agregateur",
+      "date_publication": "2026-11-12",
+      "date_estimee": true,
+      "premiere_detection": "2026-11-13",
+      "derniere_verification": "2026-11-19",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "niche"
     },
     {
       "id": "36dec8844ba6",
@@ -510,7 +528,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -539,7 +557,7 @@
       "date_publication": "2026-11-18",
       "date_estimee": true,
       "premiere_detection": "2026-11-18",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -569,36 +587,7 @@
       "date_publication": "2026-11-10",
       "date_estimee": true,
       "premiere_detection": "2026-11-14",
-      "derniere_verification": "2026-11-18",
-      "statut": "active",
-      "deja_postule": false,
-      "type_employeur": "niche"
-    },
-    {
-      "id": "53ab4c1f5021",
-      "titre": "Portfolio Management Intern H/F - Stage Janvier 2027",
-      "entreprise": "ClubFunding",
-      "famille": "plateforme_investissement",
-      "ambitieuse": false,
-      "ville": "Neuilly-sur-Seine",
-      "region": "Île-de-France",
-      "metier": "asset_management",
-      "date_debut": "2027-01",
-      "duree": 6,
-      "niveau": "non_precise",
-      "competences": [
-        "marches"
-      ],
-      "score": 77,
-      "pourquoi": "Analyse de la solidité des émetteurs et pilotage des opérations financées sur une plateforme d'investissement entrepreneuriale : une structure de taille humaine proche de votre offre de référence.",
-      "vigilance": "Niveau non précisé ; poste orienté crédit et opérations plus que distribution.",
-      "angle": "Insister sur la culture marchés et la rigueur dans le suivi de dossiers.",
-      "url": "https://www.linkedin.com/jobs/view/4471132565",
-      "type_source": "agregateur",
-      "date_publication": "2026-10-16",
-      "date_estimee": true,
-      "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -628,7 +617,7 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -657,7 +646,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -686,7 +675,7 @@
       "date_publication": "2026-10-12",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -716,7 +705,7 @@
       "date_publication": "2026-11-03",
       "date_estimee": true,
       "premiere_detection": "2026-11-04",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -746,7 +735,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -776,7 +765,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -806,7 +795,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -835,7 +824,7 @@
       "date_publication": "2026-10-12",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -864,7 +853,7 @@
       "date_publication": "2026-10-19",
       "date_estimee": false,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -893,37 +882,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-17",
-      "statut": "active",
-      "deja_postule": false,
-      "type_employeur": "grand_groupe"
-    },
-    {
-      "id": "719d39c381f1",
-      "titre": "Stagiaire Analyste Investissements H/F",
-      "entreprise": "Caisse d'Épargne Bretagne Pays de Loire",
-      "famille": "reseau_bancaire",
-      "ambitieuse": false,
-      "ville": "Orvault",
-      "region": "Pays de la Loire",
-      "metier": "asset_management",
-      "date_debut": "2027-03",
-      "duree": 6,
-      "niveau": "bac3_4",
-      "competences": [
-        "excel_vba_python",
-        "marches"
-      ],
-      "score": 60,
-      "pourquoi": "Analyse financière et modélisation (Excel avancé) au siège de Nantes, pour un Master 1 ou 2 ou une école de commerce : un poste d'investissement qui sollicite vos compétences de modélisation.",
-      "vigilance": "Début à compter de mars 2027, hors de la fenêtre habituelle ; Nantes, hors de vos zones préférées.",
-      "angle": "Mettre en avant Excel/VBA/Python et la culture des marchés.",
-      "url": "https://www.linkedin.com/jobs/view/4469353068",
-      "type_source": "agregateur",
-      "date_publication": "2026-10-15",
-      "date_estimee": true,
-      "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-17",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1011,7 +970,7 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1040,7 +999,7 @@
       "date_publication": "2026-10-13",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1069,7 +1028,7 @@
       "date_publication": "2026-10-14",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1098,7 +1057,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1127,7 +1086,7 @@
       "date_publication": "2026-10-05",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -1156,7 +1115,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -1185,7 +1144,7 @@
       "date_publication": "2026-10-17",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
@@ -1214,7 +1173,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-17",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -1244,7 +1203,7 @@
       "date_publication": "2026-10-16",
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
-      "derniere_verification": "2026-11-18",
+      "derniere_verification": "2026-11-19",
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
@@ -1897,6 +1856,36 @@
       "date_estimee": true,
       "premiere_detection": "2026-10-19",
       "derniere_verification": "2026-11-18",
+      "statut": "expiree",
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
+    },
+    {
+      "id": "719d39c381f1",
+      "titre": "Stagiaire Analyste Investissements H/F",
+      "entreprise": "Caisse d'Épargne Bretagne Pays de Loire",
+      "famille": "reseau_bancaire",
+      "ambitieuse": false,
+      "ville": "Orvault",
+      "region": "Pays de la Loire",
+      "metier": "asset_management",
+      "date_debut": "2027-03",
+      "duree": 6,
+      "niveau": "bac3_4",
+      "competences": [
+        "excel_vba_python",
+        "marches"
+      ],
+      "score": 60,
+      "pourquoi": "Analyse financière et modélisation (Excel avancé) au siège de Nantes, pour un Master 1 ou 2 ou une école de commerce : un poste d'investissement qui sollicite vos compétences de modélisation.",
+      "vigilance": "Début à compter de mars 2027, hors de la fenêtre habituelle ; Nantes, hors de vos zones préférées.",
+      "angle": "Mettre en avant Excel/VBA/Python et la culture des marchés.",
+      "url": "https://www.linkedin.com/jobs/view/4469353068",
+      "type_source": "agregateur",
+      "date_publication": "2026-10-15",
+      "date_estimee": true,
+      "premiere_detection": "2026-10-19",
+      "derniere_verification": "2026-11-19",
       "statut": "expiree",
       "deja_postule": false,
       "type_employeur": "grand_groupe"
