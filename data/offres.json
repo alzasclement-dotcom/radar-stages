@@ -1,5 +1,5 @@
 {
-  "derniere_mise_a_jour": "2026-11-19",
+  "derniere_mise_a_jour": "2026-11-20",
   "journal": [
     {
       "date": "2026-10-19",
@@ -236,6 +236,23 @@
         "Écartées : Groupe Premium conseil en gestion d'actifs (Bac+5 fin d'études), Heritage Holdings (master exigé), BNP PAM real estate fund management et La France Mutualiste analyste capital investissement (page non lue en entier / authwall).",
         "Une seule recherche LinkedIn faite (gestion de patrimoine, 7 jours) ; les autres requêtes n'ont pas été lancées. 31 offres LinkedIn revérifiées en ligne dans le navigateur intégré."
       ]
+    },
+    {
+      "date": "2026-11-20",
+      "ajoutees": 1,
+      "expirees": 1,
+      "exclues_niveau_m2": 0,
+      "moins_de_7_jours": 3,
+      "sources_inaccessibles": [
+        "linkedin.com (429 puis mur de connexion après 3 offres ; 35 offres non revérifiées, statut inchangé)",
+        "rothschildandco.com (WebFetch renvoie une autre page ; 6 offres non revérifiées)"
+      ],
+      "notes": [
+        "Expirée : Camerone Capital assistant conseiller en gestion de patrimoine (LinkedIn 404, redirection vers la recherche).",
+        "Ajoutée : BNP Paribas stage conseiller en gestion de patrimoine, Paris, page officielle lue le 20/11 (Bac+4/5).",
+        "Écartées : Rothschild ingénierie patrimoniale (M2 exigé).",
+        "Recherche LinkedIn non faite : limitation de débit."
+      ]
     }
   ],
   "offres": [
@@ -269,36 +286,6 @@
       "type_employeur": "grand_groupe"
     },
     {
-      "id": "ea9772cbc540",
-      "titre": "Stage – assistant(e) conseiller en Gestion de Patrimoine",
-      "entreprise": "Camerone Capital",
-      "famille": "cgp",
-      "ambitieuse": false,
-      "ville": "Paris",
-      "region": "Île-de-France",
-      "metier": "patrimoine",
-      "date_debut": "2027-01-11",
-      "duree": null,
-      "niveau": "bac4_5",
-      "competences": [
-        "relation_patrimoniale",
-        "marches"
-      ],
-      "score": 90,
-      "pourquoi": "Cabinet de gestion privée à taille humaine : préparation de dossiers, analyse patrimoniale et stratégies d'investissement, comme dans le M1 gestion de patrimoine.",
-      "vigilance": "Durée non précisée ; forte part de prospection téléphonique ; modèle de consultants indépendants ; mention de produits structurés.",
-      "angle": "Mettre en avant la relation client patrimoniale acquise en banque et en assurance et les objectifs commerciaux atteints.",
-      "url": "https://www.linkedin.com/jobs/view/4492075351",
-      "type_source": "agregateur",
-      "date_publication": "2026-11-18",
-      "date_estimee": false,
-      "premiere_detection": "2026-11-18",
-      "derniere_verification": "2026-11-19",
-      "statut": "active",
-      "deja_postule": false,
-      "type_employeur": "niche"
-    },
-    {
       "id": "e63e6c09ec97",
       "titre": "Stage - 6 mois - Assistant Gérant Sous Mandat F/H",
       "entreprise": "VEGA Investment Solutions",
@@ -327,6 +314,36 @@
       "statut": "active",
       "deja_postule": false,
       "type_employeur": "niche"
+    },
+    {
+      "id": "812d5d8f38ed",
+      "titre": "Stage - Conseiller en Gestion de Patrimoine H/F",
+      "entreprise": "BNP Paribas",
+      "famille": "reseau_bancaire",
+      "ambitieuse": false,
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "patrimoine",
+      "date_debut": null,
+      "duree": 6,
+      "niveau": "bac4_5",
+      "competences": [
+        "relation_patrimoniale",
+        "assurance_vie"
+      ],
+      "score": 87,
+      "pourquoi": "Conseil patrimonial en agence (épargne, transmission, retraite) : prolonge l'expérience en agence Crédit Agricole et la banque privée Swiss Life.",
+      "vigilance": "Début entre janvier et mars 2027 (à vérifier) ; poste en agence avec objectifs commerciaux, ouvert Bac+4/5 RNCP.",
+      "angle": "Mettre en avant les objectifs commerciaux atteints et le M1 Gestion de patrimoine au Cnam.",
+      "url": "https://group.bnpparibas/emploi-carriere/offre-emploi/stage-conseiller-en-gestion-de-patrimoine-h-f-4",
+      "type_source": "officielle",
+      "date_publication": "2026-11-20",
+      "date_estimee": true,
+      "premiere_detection": "2026-11-20",
+      "derniere_verification": "2026-11-20",
+      "statut": "active",
+      "deja_postule": false,
+      "type_employeur": "grand_groupe"
     },
     {
       "id": "14529680e93a",
@@ -1297,6 +1314,36 @@
       "type_employeur": "niche"
     },
     {
+      "id": "ea9772cbc540",
+      "titre": "Stage – assistant(e) conseiller en Gestion de Patrimoine",
+      "entreprise": "Camerone Capital",
+      "famille": "cgp",
+      "ambitieuse": false,
+      "ville": "Paris",
+      "region": "Île-de-France",
+      "metier": "patrimoine",
+      "date_debut": "2027-01-11",
+      "duree": null,
+      "niveau": "bac4_5",
+      "competences": [
+        "relation_patrimoniale",
+        "marches"
+      ],
+      "score": 90,
+      "pourquoi": "Cabinet de gestion privée à taille humaine : préparation de dossiers, analyse patrimoniale et stratégies d'investissement, comme dans le M1 gestion de patrimoine.",
+      "vigilance": "Durée non précisée ; forte part de prospection téléphonique ; modèle de consultants indépendants ; mention de produits structurés.",
+      "angle": "Mettre en avant la relation client patrimoniale acquise en banque et en assurance et les objectifs commerciaux atteints.",
+      "url": "https://www.linkedin.com/jobs/view/4492075351",
+      "type_source": "agregateur",
+      "date_publication": "2026-11-18",
+      "date_estimee": false,
+      "premiere_detection": "2026-11-18",
+      "derniere_verification": "2026-11-20",
+      "statut": "expiree",
+      "deja_postule": false,
+      "type_employeur": "niche"
+    },
+    {
       "id": "238f0edea568",
       "titre": "Gestion de fortune, Family Office : Stage 6 mois",
       "entreprise": "Officium Asset Management",
@@ -1313,7 +1360,7 @@
         "relation_patrimoniale",
         "marches"
       ],
-      "score": 92,
+      "score": 88,
       "pourquoi": "Support aux gérants privés et family officers, reportings mensuels et outils clients : colle à l'expérience en banque privée et à la modélisation sous Excel/VBA, dans une structure indépendante en architecture ouverte.",
       "vigilance": "L'annonce vise surtout les grandes écoles de commerce ou équivalents universitaires en droit/finance ; convention obligatoire, niveau précis non indiqué.",
       "angle": "Valoriser l'expérience en banque privée Swiss Life et l'automatisation de reportings pour un family office de taille humaine.",
